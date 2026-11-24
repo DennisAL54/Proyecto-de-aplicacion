@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include "esp_log.h"
+#include "esp_timer.h"
+#include "esp_camera.h"
+#include "camera_manager.h"
+#include "sd_storage.h"
+#include "motion.h"
+#include "debug_bmp.h"
+
+static const char *TAG = "mov";
+#define FASE1_S      30     // escena quieta
+#define FASE2_S      40     // con movimiento
+#define MAX_IMG_F1    3     // imágenes que se guardan si hay falsas detecciones en la fase 1
+#define MAX_IMG_F2    8     // imágenes que se guardan en la fase 2
+
+extern "C" void app_main(void)
+{
+    if (sd_mount() != ESP_OK) { ESP_LOGE(TAG, "no monta la SD"); return; }
+    if (camera_init() != ESP_OK) { ESP_LOGE(TAG, "no inicia la cámara"); return; }
+    if (!md_init()) { ESP_LOGE(TAG, "sin memoria para el detector"); return; }
+    mkdir("/sdcard/mov", 0777);
+
+    // Calentamiento de la cámara (~4 s): exposición y balance de blancos
+    int64_t t0 = esp_timer_get_time();
+    while (esp_timer_get_time() - t0 < 4000000) {
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (fb) esp_camera_fb_return(fb);
+    }
+
+    ESP_LOGW(TAG, ">>> FASE 1 (%d s): NO mueva nada. El primer cuadro es el fondo.", FASE1_S);
+    int64_t t_inicio = esp_timer_get_time();
+    int fase = 1;
+    int cuadros[3] = {}, con_mov[3] = {}, globales[3] = {}, desf_max[3] = {}, img[3] = {};
+    int64_t t_suma = 0, t_max = 0;
+    int total = 0;
+
+    for (int i = 0;; i++) {
+        double seg = (esp_timer_get_time() - t_inicio) / 1e6;
+        if (seg >= FASE1_S + FASE2_S) break;
+        if (fase == 1 && seg >= FASE1_S) {
+            guardar_debug_bmp("/sdcard/mov/f1_fin.bmp", md_gris(), md_mascara(), nullptr, 0);   // la máscara debe estar negra
+            fase = 2;
+            ESP_LOGW(TAG, ">>> FASE 2 (%d s): AHORA mueva algo frente a la cámara, lejos del borde inferior de la imagen.", FASE2_S);
+        }
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (!fb) continue;
+        Blob b[MD_MAX_BLOBS];
+        MotionStats st = {};
+        int64_t t1 = esp_timer_get_time();
+        int n = md_process(fb->buf, fb->width, fb->height, b, MD_MAX_BLOBS, &st);
+        int64_t dt = esp_timer_get_time() - t1;
+        esp_camera_fb_return(fb);
+        if (n < 0) { ESP_LOGE(TAG, "la imagen debe ser de 320x240 en RGB565"); break; }
+
+        total++;
+        t_suma += dt;
+        if (dt > t_max) t_max = dt;
+        cuadros[fase]++;
+        if (abs(st.desfase) > desf_max[fase]) desf_max[fase] = abs(st.desfase);
+        if (st.cambio_global) {
+            globales[fase]++;
+            ESP_LOGW(TAG, "[fase %d] cuadro %d: cambio global de luz (%d px), cuadro descartado", fase, i, st.px_mov);
+        }
+        if (n > 0) {
+            con_mov[fase]++;
+            ESP_LOGI(TAG, "[fase %d] cuadro %d: %d mancha(s), desfase %d, %lld us", fase, i, n, st.desfase, (long long)dt);
+            for (int k = 0; k < n; k++)
+                ESP_LOGI(TAG, "   caja x=%d y=%d w=%d h=%d area=%d | contacto con el suelo (%.1f, %.1f)",
+                         b[k].x, b[k].y, b[k].w, b[k].h, b[k].area, b[k].gx, b[k].gy);
+            int maximo = fase == 1 ? MAX_IMG_F1 : MAX_IMG_F2;
+            if (img[fase] < maximo && (fase == 1 || i % 3 == 0)) {
+                char ruta[48];
+                snprintf(ruta, sizeof(ruta), "/sdcard/mov/f%d_%02d.bmp", fase, img[fase]);
+                if (guardar_debug_bmp(ruta, md_gris(), md_mascara(), b, n)) img[fase]++;
+            }
+        }
+    }
+    ESP_LOGI(TAG, "================ RESUMEN ================");
+    ESP_LOGI(TAG, "Fase 1 (quieta):  %d cuadros, %d con manchas (FALSAS), %d cambios globales, desfase máx. %d", cuadros[1], con_mov[1], globales[1], desf_max[1]);
+    ESP_LOGI(TAG, "Fase 2 (mov.):    %d cuadros, %d con manchas, %d cambios globales, desfase máx. %d", cuadros[2], con_mov[2], globales[2], desf_max[2]);
+    ESP_LOGI(TAG, "Detector: promedio %lld us, máximo %lld us | imágenes guardadas: %d en fase 1, %d en fase 2",
+             (long long)(total ? t_suma / total : 0), (long long)t_max, img[1], img[2]);
+    sd_unmount();
+    ESP_LOGI(TAG, "FIN: ya puede retirar la tarjeta");
+}

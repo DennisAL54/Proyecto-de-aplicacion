@@ -1,0 +1,3 @@
+idf_component_register(SRCS "main.cpp" "camera_manager.cpp" "sd_storage.cpp" "captura.cpp"
+                            "ia_bench.cpp" "model_data.cc" "motion.cpp" "debug_bmp.cpp"
+                       INCLUDE_DIRS ".")

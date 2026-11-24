@@ -1,0 +1,2 @@
+source /home/dennis/proyectos/medidor/build/bootloader/gdbinit/symbols
+source /home/dennis/proyectos/medidor/build/bootloader/gdbinit/connect

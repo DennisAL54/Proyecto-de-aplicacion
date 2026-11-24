@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include "esp_log.h"
+#include "esp_timer.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "camera_manager.h"
+#include "sd_storage.h"
+#include "captura.h"
+
+static const char *TAG = "main";
+
+extern "C" void app_main(void)
+{
+    if (sd_mount() != ESP_OK) { ESP_LOGE(TAG, "no monta la SD"); return; }
+    if (camera_init() != ESP_OK) { ESP_LOGE(TAG, "no inicia la cámara"); return; }
+
+    // Calentamiento: ~4 s para que se estabilicen exposición y balance de blancos
+    int64_t t0 = esp_timer_get_time();
+    while (esp_timer_get_time() - t0 < 4000000) {
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (fb) esp_camera_fb_return(fb);
+    }
+    ESP_LOGI(TAG, "calentamiento listo, capturando...");
+
+    for (int k = 1; k <= 5; k++) {
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (!fb) { ESP_LOGE(TAG, "no llegó cuadro"); continue; }
+
+        char ruta[48];
+        snprintf(ruta, sizeof(ruta), "/sdcard/cuadro_%02d.bmp", k);
+        ESP_LOGI(TAG, "%s: %s", ruta, guardar_bmp(fb, ruta) ? "ok" : "ERROR");
+        snprintf(ruta, sizeof(ruta), "/sdcard/cuadro_%02d.jpg", k);
+        ESP_LOGI(TAG, "%s: %s", ruta, guardar_jpeg(fb, ruta) ? "ok" : "ERROR");
+
+        esp_camera_fb_return(fb);
+        vTaskDelay(pdMS_TO_TICKS(1000));      // 1 s entre cuadros: no mueva nada
+    }
+
+    sd_unmount();
+    ESP_LOGI(TAG, "FIN: ya puede retirar la tarjeta");
+}

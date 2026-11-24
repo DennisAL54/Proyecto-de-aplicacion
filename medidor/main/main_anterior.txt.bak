@@ -1,0 +1,56 @@
+#include "esp_log.h"
+#include "esp_timer.h"
+#include "esp_camera.h"
+#include "camera_manager.h"
+#include "motion.h"
+
+static const char *TAG = "mov";
+#define TOTAL_CUADROS 500          // unos 70 s a ~7 FPS
+
+extern "C" void app_main(void)
+{
+    if (camera_init() != ESP_OK) { ESP_LOGE(TAG, "no inicia la cámara"); return; }
+    if (!md_init()) { ESP_LOGE(TAG, "sin memoria para el detector"); return; }
+
+    // Calentamiento de la cámara (~4 s): exposición y balance de blancos
+    int64_t t0 = esp_timer_get_time();
+    while (esp_timer_get_time() - t0 < 4000000) {
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (fb) esp_camera_fb_return(fb);
+    }
+    ESP_LOGI(TAG, "NO mueva nada durante los primeros 3 s: el primer cuadro es el fondo");
+
+    int con_mov = 0, globales = 0, procesados = 0;
+    int64_t t_suma = 0, t_max = 0;
+    for (int i = 0; i < TOTAL_CUADROS; i++) {
+        camera_fb_t *fb = esp_camera_fb_get();
+        if (!fb) continue;
+        Blob b[MD_MAX_BLOBS];
+        MotionStats st = {};
+        int64_t t1 = esp_timer_get_time();
+        int n = md_process(fb->buf, fb->width, fb->height, b, MD_MAX_BLOBS, &st);
+        int64_t dt = esp_timer_get_time() - t1;
+        esp_camera_fb_return(fb);
+        if (n < 0) { ESP_LOGE(TAG, "la imagen debe ser de 320x240 en RGB565"); break; }
+
+        procesados++;
+        t_suma += dt;
+        if (dt > t_max) t_max = dt;
+        if (st.cambio_global) {
+            globales++;
+            ESP_LOGW(TAG, "cuadro %d: cambio global de luz (%d px), cuadro descartado", i, st.px_mov);
+        }
+        if (n > 0) {
+            con_mov++;
+            ESP_LOGI(TAG, "cuadro %d: %d mancha(s), desfase %d, %lld us", i, n, st.desfase, (long long)dt);
+            for (int k = 0; k < n; k++)
+                ESP_LOGI(TAG, "   caja x=%d y=%d w=%d h=%d area=%d | contacto con el suelo (%.1f, %.1f)",
+                         b[k].x, b[k].y, b[k].w, b[k].h, b[k].area, b[k].gx, b[k].gy);
+        }
+        if (i % 100 == 99)
+            ESP_LOGI(TAG, "--- %d cuadros: promedio %lld us, máximo %lld us", procesados,
+                     (long long)(t_suma / procesados), (long long)t_max);
+    }
+    ESP_LOGI(TAG, "FIN: %d cuadros, %d con movimiento, %d con cambio global; detector: promedio %lld us, máximo %lld us",
+             procesados, con_mov, globales, (long long)(procesados ? t_suma / procesados : 0), (long long)t_max);
+}

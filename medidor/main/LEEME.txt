@@ -1,0 +1,5 @@
+Ensayo en vivo (hito 10, paso 8)
+1) Respaldo:   cp main/main.cpp main/main_ensayo107.txt.bak
+2) Copiar a main/: cadena.h cadena.cpp (sobrescriben) vivo.h vivo.cpp main.cpp (sobrescribe) CMakeLists.txt (sobrescribe)
+3) En la raíz de la microSD: hora.txt y calibracion.txt (formato en vivo.h)
+4) idf.py build flash monitor

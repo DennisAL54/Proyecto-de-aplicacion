@@ -1,0 +1,202 @@
+Command: /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis/proyectos/medidor/build/medidor.elf /home/dennis/proyectos/medidor/build/bootloader/bootloader.elf -m '/home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dennis/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (107) esp_image: segment 2: paddr=0002830c vaddr=40378000 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42007ddf
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1668
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x3178
+entry 0x403c894c
+[0;32mI (24) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 15 2026 17:28:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.4[0m
+[0;32mI (31) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=12588h ( 75144) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=000225b0 vaddr=3fc97600 size=05d54h ( 23892) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0002830c vaddr=40378000 size=07d0ch ( 32012) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=3927ch (234108) map[0m
+[0;32mI (151) esp_image: segment 4: paddr=000692a4 vaddr=4037fd0c size=078c8h ( 30920) load[0m
+[0;32mI (157) esp_image: segment 5: paddr=00070b74 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (176) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (176) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (178) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (182) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (187) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (191) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (196) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (201) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (205) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (210) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (214) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (219) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (222) esp_psram: Speed: 80MHz[0m
+[0;32mI (225) cpu_start: Multicore app[0m
+[0;32mI (514) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (522) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (522) cpu_start: Pro cpu start user code[0m
+[0;32mI (522) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (524) app_init: Application information:[0m
+[0;32mI (528) app_init: Project name:     medidor[0m
+[0;32mI (532) app_init: App version:      1[0m
+[0;32mI (535) app_init: Compile time:     Oct 15 2026 17:28:07[0m
+[0;32mI (540) app_init: ELF file SHA256:  afd503446...[0m
+[0;32mI (544) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (548) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (552) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (556) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (560) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (566) heap_init: At 3FC9EDD8 len 0004A938 (298 KiB): RAM[0m
+[0;32mI (571) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (577) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (582) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (589) spi_flash: detected chip: boya[0m
+[0;32mI (592) spi_flash: flash io: qio[0m
+[0;32mI (595) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (601) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (608) main_task: Started on CPU0[0m
+[0;32mI (611) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+Name: SD   
+Type: SDHC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 59200MB
+CSD: ver=2, sector_size=512, capacity=121241600 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (727) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (729) cam_hal: cam init ok[0m
+[0;32mI (732) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (735) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (749) ov3640: Mismatch PID=0x5640[0m
+[0;32mI (750) ov3660: Mismatch PID=0x5640[0m
+[0;32mI (752) camera: Camera PID=0x5640 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (752) camera: Detected OV5640 camera[0m
+[0;32mI (754) camera: Detected camera at address=0x3c[0m
+[0;32mI (1443) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1443) s3 ll_cam: node_size: 3840, nodes_per_line: 1, lines_per_node: 6[0m
+[0;32mI (1443) s3 ll_cam: dma_half_buffer_min:  3840, dma_half_buffer: 15360, lines_per_half_buffer: 24, dma_buffer_size: 30720[0m
+[0;32mI (1453) cam_hal: buffer_size: 30720, half_buffer_size: 15360, node_buffer_size: 3840, node_cnt: 8, total_cnt: 10[0m
+[0;32mI (1463) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1468) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1474) cam_hal: cam config ok[0m
+[0;32mI (1488) ov5640: Set PLL: bypass: 0, multiplier: 8, sys_div: 1, pre_div: 1, root_2x: 0, pclk_root_div: 1, pclk_manual: 1, pclk_div: 4[0m
+[0;32mI (1489) ov5640: Calculated XVCLK: 20000000 Hz, REFIN: 20000000 Hz, VCO: 160000000 Hz, PLL_CLK: 64000000 Hz, SYSCLK: 16000000 Hz, PCLK: 8000000 Hz[0m
+[0;33mW (5572) mov: >>> FASE 1 (30 s): NO mueva nada. El primer cuadro es el fondo.[0m
+[0;33mW (36463) mov: >>> FASE 2 (40 s): AHORA mueva algo frente a la cámara, lejos del borde inferior de la imagen.[0m
+[0;32mI (44467) mov: [fase 2] cuadro 285: 1 mancha(s), desfase 9, 49945 us[0m
+[0;32mI (44467) mov:    caja x=54 y=87 w=37 h=33 area=956 | contacto con el suelo (139.5, 239.5)[0m
+[0;32mI (45278) mov: [fase 2] cuadro 286: 1 mancha(s), desfase 10, 50920 us[0m
+[0;32mI (45278) mov:    caja x=5 y=41 w=56 h=79 area=2338 | contacto con el suelo (94.5, 239.5)[0m
+[0;32mI (45538) mov: [fase 2] cuadro 288: 1 mancha(s), desfase 10, 50702 us[0m
+[0;32mI (45538) mov:    caja x=7 y=39 w=59 h=81 area=2494 | contacto con el suelo (107.5, 239.5)[0m
+[0;32mI (51292) mov: [fase 2] cuadro 325: 2 mancha(s), desfase 2, 49506 us[0m
+[0;32mI (51292) mov:    caja x=154 y=31 w=6 h=28 area=103 | contacto con el suelo (313.5, 117.5)[0m
+[0;32mI (51295) mov:    caja x=158 y=73 w=2 h=7 area=14 | contacto con el suelo (317.5, 159.5)[0m
+[0;32mI (51427) mov: [fase 2] cuadro 326: 2 mancha(s), desfase 2, 50404 us[0m
+[0;32mI (51427) mov:    caja x=136 y=0 w=24 h=61 area=1253 | contacto con el suelo (295.5, 121.5)[0m
+[0;32mI (51430) mov:    caja x=143 y=67 w=17 h=47 area=602 | contacto con el suelo (308.5, 227.5)[0m
+[0;32mI (51561) mov: [fase 2] cuadro 327: 2 mancha(s), desfase 2, 51080 us[0m
+[0;32mI (51562) mov:    caja x=119 y=0 w=38 h=61 area=1935 | contacto con el suelo (267.5, 121.5)[0m
+[0;32mI (51565) mov:    caja x=129 y=66 w=31 h=54 area=1271 | contacto con el suelo (307.5, 239.5)[0m
+[0;32mI (52372) mov: [fase 2] cuadro 328: 2 mancha(s), desfase 2, 51362 us[0m
+[0;32mI (52373) mov:    caja x=18 y=0 w=30 h=58 area=1484 | contacto con el suelo (60.5, 115.5)[0m
+[0;32mI (52376) mov:    caja x=57 y=80 w=65 h=40 area=1737 | contacto con el suelo (178.5, 239.5)[0m
+[0;32mI (52497) mov: [fase 2] cuadro 329: 2 mancha(s), desfase 3, 50725 us[0m
+[0;32mI (52498) mov:    caja x=0 y=0 w=23 h=57 area=1160 | contacto con el suelo (17.5, 113.5)[0m
+[0;32mI (52500) mov:    caja x=53 y=86 w=56 h=34 area=1368 | contacto con el suelo (161.5, 239.5)[0m
+[0;32mI (52631) mov: [fase 2] cuadro 330: 1 mancha(s), desfase 4, 49995 us[0m
+[0;32mI (52631) mov:    caja x=50 y=90 w=46 h=30 area=1075 | contacto con el suelo (145.5, 239.5)[0m
+[0;32mI (53438) mov: [fase 2] cuadro 331: 1 mancha(s), desfase 7, 49562 us[0m
+[0;32mI (53438) mov:    caja x=55 y=114 w=23 h=6 area=112 | contacto con el suelo (132.5, 239.5)[0m
+[0;32mI (53568) mov: [fase 2] cuadro 332: 1 mancha(s), desfase 7, 49477 us[0m
+[0;32mI (53568) mov:    caja x=56 y=114 w=24 h=6 area=111 | contacto con el suelo (135.5, 239.5)[0m
+[0;32mI (53702) mov: [fase 2] cuadro 333: 1 mancha(s), desfase 8, 49504 us[0m
+[0;32mI (53702) mov:    caja x=57 y=113 w=25 h=7 area=128 | contacto con el suelo (138.5, 239.5)[0m
+[0;32mI (54506) mov: [fase 2] cuadro 334: 2 mancha(s), desfase 8, 50535 us[0m
+[0;32mI (54507) mov:    caja x=35 y=0 w=50 h=57 area=1906 | contacto con el suelo (139.5, 113.5)[0m
+[0;32mI (54510) mov:    caja x=112 y=84 w=48 h=36 area=1275 | contacto con el suelo (271.5, 239.5)[0m
+[0;32mI (54568) mov: [fase 2] cuadro 335: 2 mancha(s), desfase 9, 49955 us[0m
+[0;32mI (54568) mov:    caja x=74 y=0 w=51 h=54 area=1874 | contacto con el suelo (212.5, 107.5)[0m
+[0;32mI (54571) mov:    caja x=136 y=77 w=24 h=43 area=788 | contacto con el suelo (282.5, 239.5)[0m
+[0;32mI (54774) mov: [fase 2] cuadro 336: 1 mancha(s), desfase 9, 49539 us[0m
+[0;32mI (54775) mov:    caja x=152 y=0 w=8 h=34 area=193 | contacto con el suelo (315.5, 67.5)[0m
+[0;32mI (56382) mov: [fase 2] cuadro 343: 2 mancha(s), desfase 11, 49587 us[0m
+[0;32mI (56383) mov:    caja x=155 y=44 w=5 h=18 area=70 | contacto con el suelo (315.5, 123.5)[0m
+[0;32mI (56386) mov:    caja x=149 y=85 w=11 h=24 area=210 | contacto con el suelo (313.5, 217.5)[0m
+[0;32mI (56518) mov: [fase 2] cuadro 344: 2 mancha(s), desfase 10, 50810 us[0m
+[0;32mI (56518) mov:    caja x=124 y=0 w=36 h=68 area=1947 | contacto con el suelo (269.5, 135.5)[0m
+[0;32mI (56521) mov:    caja x=137 y=84 w=23 h=36 area=721 | contacto con el suelo (297.5, 239.5)[0m
+[0;32mI (56652) mov: [fase 2] cuadro 345: 2 mancha(s), desfase 10, 51091 us[0m
+[0;32mI (56652) mov:    caja x=92 y=0 w=45 h=69 area=2190 | contacto con el suelo (213.5, 137.5)[0m
+[0;32mI (56655) mov:    caja x=117 y=85 w=43 h=35 area=1068 | contacto con el suelo (270.5, 239.5)[0m
+[0;32mI (58394) mov: [fase 2] cuadro 353: 1 mancha(s), desfase 11, 50705 us[0m
+[0;32mI (58395) mov:    caja x=38 y=77 w=97 h=43 area=2433 | contacto con el suelo (229.5, 239.5)[0m
+[0;32mI (58528) mov: [fase 2] cuadro 354: 1 mancha(s), desfase 12, 50044 us[0m
+[0;32mI (58528) mov:    caja x=83 y=93 w=53 h=27 area=1141 | contacto con el suelo (225.5, 239.5)[0m
+[0;32mI (59334) mov: [fase 2] cuadro 355: 2 mancha(s), desfase -18, 50025 us[0m
+[0;32mI (59334) mov:    caja x=134 y=0 w=26 h=58 area=1054 | contacto con el suelo (309.5, 115.5)[0m
+[0;32mI (59337) mov:    caja x=156 y=106 w=4 h=14 area=43 | contacto con el suelo (316.5, 239.5)[0m
+[0;32mI (59464) mov: [fase 2] cuadro 356: 2 mancha(s), desfase -17, 49705 us[0m
+[0;32mI (59464) mov:    caja x=146 y=0 w=14 h=32 area=334 | contacto con el suelo (313.5, 63.5)[0m
+[0;32mI (59467) mov:    caja x=150 y=64 w=10 h=33 area=224 | contacto con el suelo (317.5, 193.5)[0m
+[0;32mI (59598) mov: [fase 2] cuadro 357: 2 mancha(s), desfase -15, 49802 us[0m
+[0;32mI (59599) mov:    caja x=141 y=0 w=14 h=5 area=55 | contacto con el suelo (296.5, 9.5)[0m
+[0;32mI (59601) mov:    caja x=145 y=64 w=15 h=56 area=660 | contacto con el suelo (312.5, 239.5)[0m
+[0;32mI (65089) mov: [fase 2] cuadro 398: 1 mancha(s), desfase 3, 49787 us[0m
+[0;32mI (65090) mov:    caja x=13 y=90 w=65 h=30 area=696 | contacto con el suelo (137.5, 239.5)[0m
+[0;32mI (65224) mov: [fase 2] cuadro 399: 1 mancha(s), desfase 3, 50237 us[0m
+[0;32mI (65224) mov:    caja x=0 y=51 w=92 h=42 area=1477 | contacto con el suelo (165.5, 185.5)[0m
+[0;32mI (65358) mov: [fase 2] cuadro 400: 2 mancha(s), desfase 3, 50773 us[0m
+[0;32mI (65358) mov:    caja x=0 y=19 w=104 h=43 area=2282 | contacto con el suelo (187.5, 123.5)[0m
+[0;32mI (65362) mov:    caja x=108 y=105 w=25 h=15 area=233 | contacto con el suelo (239.5, 239.5)[0m
+[0;32mI (65492) mov: [fase 2] cuadro 401: 2 mancha(s), desfase 2, 51157 us[0m
+[0;32mI (65492) mov:    caja x=0 y=0 w=110 h=32 area=2455 | contacto con el suelo (204.5, 63.5)[0m
+[0;32mI (65495) mov:    caja x=91 y=84 w=46 h=36 area=827 | contacto con el suelo (210.5, 239.5)[0m
+[0;32mI (65625) mov: [fase 2] cuadro 402: 1 mancha(s), desfase 3, 50139 us[0m
+[0;32mI (65625) mov:    caja x=64 y=62 w=73 h=58 area=1418 | contacto con el suelo (163.5, 239.5)[0m
+[0;32mI (66162) mov: [fase 2] cuadro 406: 1 mancha(s), desfase 5, 50205 us[0m
+[0;32mI (66162) mov:    caja x=29 y=31 w=30 h=89 area=1626 | contacto con el suelo (86.5, 239.5)[0m
+[0;32mI (66295) mov: [fase 2] cuadro 407: 1 mancha(s), desfase 5, 49966 us[0m
+[0;32mI (66296) mov:    caja x=11 y=59 w=37 h=61 area=1071 | contacto con el suelo (76.5, 239.5)[0m
+[0;32mI (66429) mov: [fase 2] cuadro 408: 2 mancha(s), desfase 6, 49701 us[0m
+[0;32mI (66430) mov:    caja x=13 y=85 w=27 h=24 area=472 | contacto con el suelo (61.5, 217.5)[0m
+[0;32mI (66432) mov:    caja x=25 y=113 w=17 h=7 area=100 | contacto con el suelo (66.5, 239.5)[0m
+[0;32mI (66563) mov: [fase 2] cuadro 409: 2 mancha(s), desfase 6, 49534 us[0m
+[0;32mI (66563) mov:    caja x=16 y=90 w=17 h=18 area=194 | contacto con el suelo (54.5, 215.5)[0m
+[0;32mI (66566) mov:    caja x=31 y=115 w=4 h=5 area=20 | contacto con el suelo (65.5, 239.5)[0m
+[0;32mI (66697) mov: [fase 2] cuadro 410: 1 mancha(s), desfase 6, 49437 us[0m
+[0;32mI (66697) mov:    caja x=16 y=95 w=10 h=12 area=64 | contacto con el suelo (45.5, 213.5)[0m
+[0;32mI (67099) mov: [fase 2] cuadro 413: 1 mancha(s), desfase 5, 49457 us[0m
+[0;32mI (67099) mov:    caja x=20 y=97 w=10 h=9 area=48 | contacto con el suelo (53.5, 211.5)[0m
+[0;32mI (67232) mov: [fase 2] cuadro 414: 1 mancha(s), desfase 5, 49639 us[0m
+[0;32mI (67232) mov:    caja x=15 y=86 w=29 h=34 area=464 | contacto con el suelo (77.5, 239.5)[0m
+[0;32mI (67366) mov: [fase 2] cuadro 415: 1 mancha(s), desfase 5, 50014 us[0m
+[0;32mI (67366) mov:    caja x=20 y=65 w=37 h=55 area=1147 | contacto con el suelo (90.5, 239.5)[0m
+[0;32mI (67500) mov: [fase 2] cuadro 416: 1 mancha(s), desfase 5, 50293 us[0m
+[0;32mI (67500) mov:    caja x=30 y=33 w=39 h=87 area=1810 | contacto con el suelo (111.5, 239.5)[0m
+[0;32mI (67635) mov: [fase 2] cuadro 417: 1 mancha(s), desfase 6, 50668 us[0m
+[0;32mI (67635) mov:    caja x=47 y=10 w=36 h=110 area=2503 | contacto con el suelo (132.5, 239.5)[0m
+[0;32mI (68440) mov: [fase 2] cuadro 423: 1 mancha(s), desfase 7, 50440 us[0m
+[0;32mI (68440) mov:    caja x=0 y=0 w=35 h=100 area=1932 | contacto con el suelo (51.5, 199.5)[0m
+[0;32mI (75679) mov: ================ RESUMEN ================[0m
+[0;32mI (75679) mov: Fase 1 (quieta):  225 cuadros, 0 con manchas (FALSAS), 0 cambios globales, desfase máx. 28[0m
+[0;32mI (75682) mov: Fase 2 (mov.):    253 cuadros, 39 con manchas, 0 cambios globales, desfase máx. 26[0m
+[0;32mI (75691) mov: Detector: promedio 49454 us, máximo 51663 us | imágenes guardadas: 0 en fase 1, 8 en fase 2[0m
+[0;32mI (75701) mov: FIN: ya puede retirar la tarjeta[0m
+[0;32mI (75705) main_task: Returned from app_main()[0m

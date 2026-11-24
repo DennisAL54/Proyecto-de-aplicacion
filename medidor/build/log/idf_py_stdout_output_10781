@@ -1,0 +1,57 @@
+Command: ninja flash
+[1/5] cd /home/dennis/proyectos/medidor/build/esp-idf/esptool_py && /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dennis/proyectos/medidor/build/partition_table/partition-table.bin /home/dennis/proyectos/medidor/build/medidor.bin
+medidor.bin binary size 0x60bc0 bytes. Smallest app partition is 0x600000 bytes. 0x59f440 bytes (94%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/dennis/proyectos/medidor/build/bootloader/esp-idf/esptool_py && /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/dennis/proyectos/medidor/build/bootloader/bootloader.bin
+Bootloader binary size 0x5700 bytes. 0x2900 bytes (32%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/dennis/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/dennis/esp/esp-idf -D "SERIAL_TOOL=/home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/home/dennis/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/dennis/proyectos/medidor/build -P /home/dennis/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 medidor.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.0
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 28:84:85:92:81:40
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00070fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22272 bytes to 14238...
+Writing at 0x00000000... (100 %)
+Wrote 22272 bytes (14238 compressed) at 0x00000000 in 0.3 seconds (effective 650.0 kbit/s)...
+Hash of data verified.
+Compressed 396224 bytes to 231109...
+Writing at 0x00010000... (6 %)
+Writing at 0x0001c234... (13 %)
+Writing at 0x00025951... (20 %)
+Writing at 0x0002c283... (26 %)
+Writing at 0x0003214f... (33 %)
+Writing at 0x00037bfe... (40 %)
+Writing at 0x0003d2ba... (46 %)
+Writing at 0x000421e3... (53 %)
+Writing at 0x00048ea3... (60 %)
+Writing at 0x0004fe19... (66 %)
+Writing at 0x00055600... (73 %)
+Writing at 0x0005b3ab... (80 %)
+Writing at 0x0006426f... (86 %)
+Writing at 0x00069d85... (93 %)
+Writing at 0x0007002f... (100 %)
+Wrote 396224 bytes (231109 compressed) at 0x00010000 in 2.5 seconds (effective 1283.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 754.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

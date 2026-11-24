@@ -1,0 +1,227 @@
+Command: /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis/proyectos/medidor/build/medidor.elf /home/dennis/proyectos/medidor/build/bootloader/bootloader.elf -m '/home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dennis/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420073eb
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1668
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x3178
+entry 0x403c894c
+[0;32mI (24) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 15 2026 17:28:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.4[0m
+[0;32mI (31) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0ed70h ( 60784) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001ed98 vaddr=3fc97600 size=01280h (  4736) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=26924h (157988) map[0m
+[0;32mI (130) esp_image: segment 3: paddr=0004694c vaddr=3fc98880 size=04984h ( 18820) load[0m
+[0;32mI (134) esp_image: segment 4: paddr=0004b2d8 vaddr=40378000 size=0f504h ( 62724) load[0m
+[0;32mI (147) esp_image: segment 5: paddr=0005a7e4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (154) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (154) boot: Disabling RNG early entropy source...[0m
+[0;32mI (164) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (165) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (165) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (167) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (171) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (175) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (179) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (184) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (189) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (194) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (199) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (203) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (208) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (211) esp_psram: Speed: 80MHz[0m
+[0;32mI (214) cpu_start: Multicore app[0m
+[0;32mI (502) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (510) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (511) cpu_start: Pro cpu start user code[0m
+[0;32mI (511) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (513) app_init: Application information:[0m
+[0;32mI (517) app_init: Project name:     medidor[0m
+[0;32mI (520) app_init: App version:      1[0m
+[0;32mI (524) app_init: Compile time:     Oct 15 2026 17:28:07[0m
+[0;32mI (529) app_init: ELF file SHA256:  282041ccd...[0m
+[0;32mI (533) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (537) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (541) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (545) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (549) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (555) heap_init: At 3FC9EC20 len 0004AAF0 (298 KiB): RAM[0m
+[0;32mI (560) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (565) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (571) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (578) spi_flash: detected chip: boya[0m
+[0;32mI (580) spi_flash: flash io: qio[0m
+[0;32mI (584) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (590) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (597) main_task: Started on CPU0[0m
+[0;32mI (600) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (608) main_task: Calling app_main()[0m
+[0;32mI (611) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (614) cam_hal: cam init ok[0m
+[0;32mI (617) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (620) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (634) ov3640: Mismatch PID=0x5640[0m
+[0;32mI (636) ov3660: Mismatch PID=0x5640[0m
+[0;32mI (637) camera: Camera PID=0x5640 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (637) camera: Detected OV5640 camera[0m
+[0;32mI (639) camera: Detected camera at address=0x3c[0m
+[0;32mI (1328) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1328) s3 ll_cam: node_size: 3840, nodes_per_line: 1, lines_per_node: 6[0m
+[0;32mI (1328) s3 ll_cam: dma_half_buffer_min:  3840, dma_half_buffer: 15360, lines_per_half_buffer: 24, dma_buffer_size: 30720[0m
+[0;32mI (1338) cam_hal: buffer_size: 30720, half_buffer_size: 15360, node_buffer_size: 3840, node_cnt: 8, total_cnt: 10[0m
+[0;32mI (1348) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1353) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1359) cam_hal: cam config ok[0m
+[0;32mI (1373) ov5640: Set PLL: bypass: 0, multiplier: 8, sys_div: 1, pre_div: 1, root_2x: 0, pclk_root_div: 1, pclk_manual: 1, pclk_div: 4[0m
+[0;32mI (1374) ov5640: Calculated XVCLK: 20000000 Hz, REFIN: 20000000 Hz, VCO: 160000000 Hz, PLL_CLK: 64000000 Hz, SYSCLK: 16000000 Hz, PCLK: 8000000 Hz[0m
+[0;32mI (5456) mov: NO mueva nada durante los primeros 3 s: el primer cuadro es el fondo[0m
+[0;32mI (17195) mov: cuadro 86: 1 mancha(s), desfase 3, 49495 us[0m
+[0;32mI (17195) mov:    caja x=32 y=99 w=4 h=8 area=28 | contacto con el suelo (66.5, 213.5)[0m
+[0;32mI (17329) mov: cuadro 87: 1 mancha(s), desfase 3, 49431 us[0m
+[0;32mI (17329) mov:    caja x=31 y=99 w=5 h=12 area=49 | contacto con el suelo (66.5, 221.5)[0m
+[0;32mI (17464) mov: cuadro 88: 1 mancha(s), desfase 2, 49495 us[0m
+[0;32mI (17464) mov:    caja x=29 y=100 w=7 h=11 area=63 | contacto con el suelo (65.5, 221.5)[0m
+[0;32mI (17598) mov: cuadro 89: 1 mancha(s), desfase 3, 49441 us[0m
+[0;32mI (17598) mov:    caja x=29 y=101 w=7 h=10 area=62 | contacto con el suelo (64.5, 221.5)[0m
+[0;32mI (17733) mov: cuadro 90: 1 mancha(s), desfase 3, 49488 us[0m
+[0;32mI (17733) mov:    caja x=29 y=101 w=7 h=10 area=59 | contacto con el suelo (64.5, 221.5)[0m
+[0;32mI (17867) mov: cuadro 91: 1 mancha(s), desfase 3, 49441 us[0m
+[0;32mI (17867) mov:    caja x=29 y=101 w=7 h=10 area=61 | contacto con el suelo (65.5, 221.5)[0m
+[0;32mI (18002) mov: cuadro 92: 1 mancha(s), desfase 3, 49485 us[0m
+[0;32mI (18002) mov:    caja x=29 y=101 w=7 h=10 area=55 | contacto con el suelo (66.5, 221.5)[0m
+[0;32mI (18136) mov: cuadro 93: 1 mancha(s), desfase 3, 49434 us[0m
+[0;32mI (18136) mov:    caja x=30 y=101 w=6 h=10 area=50 | contacto con el suelo (67.5, 221.5)[0m
+[0;32mI (18270) mov: cuadro 94: 1 mancha(s), desfase 3, 49477 us[0m
+[0;32mI (18271) mov:    caja x=30 y=101 w=6 h=10 area=50 | contacto con el suelo (67.5, 221.5)[0m
+[0;32mI (18405) mov: cuadro 95: 1 mancha(s), desfase 3, 49437 us[0m
+[0;32mI (18405) mov:    caja x=30 y=101 w=6 h=9 area=43 | contacto con el suelo (67.5, 219.5)[0m
+[0;32mI (18674) mov: cuadro 97: 1 mancha(s), desfase 3, 49440 us[0m
+[0;32mI (18674) mov:    caja x=29 y=104 w=7 h=6 area=37 | contacto con el suelo (64.5, 219.5)[0m
+[0;32mI (18808) mov: cuadro 98: 1 mancha(s), desfase 4, 49481 us[0m
+[0;32mI (18809) mov:    caja x=30 y=101 w=7 h=6 area=38 | contacto con el suelo (66.5, 213.5)[0m
+[0;32mI (18943) mov: cuadro 99: 1 mancha(s), desfase 4, 49435 us[0m
+[0;32mI (18943) mov:    caja x=31 y=100 w=6 h=6 area=31 | contacto con el suelo (67.5, 211.5)[0m
+[0;32mI (18945) mov: --- 100 cuadros: promedio 49085 us, máximo 49495 us[0m
+[0;32mI (19077) mov: cuadro 100: 1 mancha(s), desfase 4, 49478 us[0m
+[0;32mI (19078) mov:    caja x=31 y=101 w=6 h=5 area=26 | contacto con el suelo (67.5, 211.5)[0m
+[0;32mI (19212) mov: cuadro 101: 1 mancha(s), desfase 4, 49434 us[0m
+[0;32mI (19212) mov:    caja x=31 y=101 w=6 h=6 area=29 | contacto con el suelo (67.5, 213.5)[0m
+[0;32mI (19346) mov: cuadro 102: 1 mancha(s), desfase 4, 49480 us[0m
+[0;32mI (19346) mov:    caja x=30 y=102 w=7 h=5 area=28 | contacto con el suelo (66.5, 213.5)[0m
+[0;32mI (19480) mov: cuadro 103: 1 mancha(s), desfase 3, 49439 us[0m
+[0;32mI (19480) mov:    caja x=29 y=103 w=8 h=7 area=48 | contacto con el suelo (65.5, 219.5)[0m
+[0;32mI (19749) mov: cuadro 105: 1 mancha(s), desfase 4, 49427 us[0m
+[0;32mI (19749) mov:    caja x=33 y=98 w=4 h=12 area=45 | contacto con el suelo (69.5, 219.5)[0m
+[0;32mI (19884) mov: cuadro 106: 1 mancha(s), desfase 4, 49479 us[0m
+[0;32mI (19884) mov:    caja x=32 y=98 w=5 h=13 area=52 | contacto con el suelo (67.5, 221.5)[0m
+[0;32mI (20018) mov: cuadro 107: 1 mancha(s), desfase 4, 49436 us[0m
+[0;32mI (20018) mov:    caja x=30 y=97 w=7 h=14 area=66 | contacto con el suelo (65.5, 221.5)[0m
+[0;32mI (20153) mov: cuadro 108: 1 mancha(s), desfase 4, 49492 us[0m
+[0;32mI (20153) mov:    caja x=29 y=97 w=8 h=13 area=69 | contacto con el suelo (64.5, 219.5)[0m
+[0;32mI (20287) mov: cuadro 109: 1 mancha(s), desfase 4, 49453 us[0m
+[0;32mI (20287) mov:    caja x=27 y=98 w=10 h=11 area=83 | contacto con el suelo (63.5, 217.5)[0m
+[0;32mI (20422) mov: cuadro 110: 1 mancha(s), desfase 4, 49524 us[0m
+[0;32mI (20422) mov:    caja x=26 y=95 w=12 h=13 area=117 | contacto con el suelo (63.5, 215.5)[0m
+[0;32mI (20556) mov: cuadro 111: 1 mancha(s), desfase 4, 49474 us[0m
+[0;32mI (20556) mov:    caja x=26 y=94 w=12 h=14 area=117 | contacto con el suelo (64.5, 215.5)[0m
+[0;32mI (20690) mov: cuadro 112: 1 mancha(s), desfase 3, 49523 us[0m
+[0;32mI (20690) mov:    caja x=25 y=93 w=13 h=16 area=132 | contacto con el suelo (62.5, 217.5)[0m
+[0;32mI (20825) mov: cuadro 113: 1 mancha(s), desfase 4, 49474 us[0m
+[0;32mI (20825) mov:    caja x=26 y=94 w=11 h=16 area=124 | contacto con el suelo (61.5, 219.5)[0m
+[0;32mI (20959) mov: cuadro 114: 1 mancha(s), desfase 4, 49515 us[0m
+[0;32mI (20959) mov:    caja x=26 y=97 w=11 h=14 area=115 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21094) mov: cuadro 115: 1 mancha(s), desfase 4, 49462 us[0m
+[0;32mI (21094) mov:    caja x=27 y=99 w=9 h=12 area=92 | contacto con el suelo (61.5, 221.5)[0m
+[0;32mI (21228) mov: cuadro 116: 1 mancha(s), desfase 4, 49507 us[0m
+[0;32mI (21228) mov:    caja x=26 y=100 w=10 h=11 area=91 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21363) mov: cuadro 117: 1 mancha(s), desfase 4, 49463 us[0m
+[0;32mI (21363) mov:    caja x=26 y=100 w=10 h=11 area=90 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21497) mov: cuadro 118: 1 mancha(s), desfase 4, 49500 us[0m
+[0;32mI (21497) mov:    caja x=26 y=101 w=10 h=10 area=85 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21632) mov: cuadro 119: 1 mancha(s), desfase 4, 49461 us[0m
+[0;32mI (21632) mov:    caja x=26 y=101 w=10 h=10 area=85 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21766) mov: cuadro 120: 1 mancha(s), desfase 4, 49505 us[0m
+[0;32mI (21766) mov:    caja x=26 y=101 w=10 h=10 area=85 | contacto con el suelo (60.5, 221.5)[0m
+[0;32mI (21901) mov: cuadro 121: 1 mancha(s), desfase 4, 49458 us[0m
+[0;32mI (21901) mov:    caja x=27 y=101 w=9 h=10 area=80 | contacto con el suelo (61.5, 221.5)[0m
+[0;32mI (22035) mov: cuadro 122: 1 mancha(s), desfase 4, 49498 us[0m
+[0;32mI (22035) mov:    caja x=28 y=100 w=8 h=11 area=78 | contacto con el suelo (62.5, 221.5)[0m
+[0;32mI (22170) mov: cuadro 123: 1 mancha(s), desfase 4, 49449 us[0m
+[0;32mI (22170) mov:    caja x=29 y=99 w=7 h=12 area=71 | contacto con el suelo (64.5, 221.5)[0m
+[0;32mI (22304) mov: cuadro 124: 1 mancha(s), desfase 4, 49481 us[0m
+[0;32mI (22304) mov:    caja x=30 y=99 w=6 h=12 area=59 | contacto con el suelo (66.5, 221.5)[0m
+[0;32mI (22439) mov: cuadro 125: 1 mancha(s), desfase 5, 49437 us[0m
+[0;32mI (22439) mov:    caja x=30 y=99 w=6 h=9 area=43 | contacto con el suelo (67.5, 215.5)[0m
+[0;32mI (22573) mov: cuadro 126: 1 mancha(s), desfase 4, 49483 us[0m
+[0;32mI (22573) mov:    caja x=30 y=99 w=7 h=8 area=43 | contacto con el suelo (66.5, 213.5)[0m
+[0;32mI (22707) mov: cuadro 127: 1 mancha(s), desfase 4, 49436 us[0m
+[0;32mI (22708) mov:    caja x=30 y=99 w=7 h=9 area=50 | contacto con el suelo (68.5, 215.5)[0m
+[0;32mI (22842) mov: cuadro 128: 1 mancha(s), desfase 4, 49478 us[0m
+[0;32mI (22842) mov:    caja x=31 y=100 w=6 h=9 area=46 | contacto con el suelo (68.5, 217.5)[0m
+[0;32mI (22976) mov: cuadro 129: 1 mancha(s), desfase 5, 49431 us[0m
+[0;32mI (22977) mov:    caja x=31 y=100 w=6 h=9 area=43 | contacto con el suelo (69.5, 217.5)[0m
+[0;32mI (23111) mov: cuadro 130: 1 mancha(s), desfase 4, 49486 us[0m
+[0;32mI (23111) mov:    caja x=31 y=100 w=6 h=8 area=39 | contacto con el suelo (69.5, 215.5)[0m
+[0;32mI (23245) mov: cuadro 131: 1 mancha(s), desfase 4, 49431 us[0m
+[0;32mI (23245) mov:    caja x=31 y=100 w=6 h=8 area=38 | contacto con el suelo (69.5, 215.5)[0m
+[0;32mI (23380) mov: cuadro 132: 1 mancha(s), desfase 5, 49482 us[0m
+[0;32mI (23380) mov:    caja x=31 y=100 w=6 h=8 area=38 | contacto con el suelo (69.5, 215.5)[0m
+[0;32mI (23514) mov: cuadro 133: 1 mancha(s), desfase 5, 49431 us[0m
+[0;32mI (23514) mov:    caja x=31 y=100 w=6 h=7 area=35 | contacto con el suelo (68.5, 213.5)[0m
+[0;32mI (23649) mov: cuadro 134: 1 mancha(s), desfase -19, 49481 us[0m
+[0;32mI (23649) mov:    caja x=31 y=100 w=6 h=7 area=35 | contacto con el suelo (68.5, 213.5)[0m
+[0;32mI (23783) mov: cuadro 135: 1 mancha(s), desfase -19, 49429 us[0m
+[0;32mI (23783) mov:    caja x=31 y=100 w=6 h=7 area=35 | contacto con el suelo (68.5, 213.5)[0m
+[0;32mI (23917) mov: cuadro 136: 1 mancha(s), desfase 0, 49480 us[0m
+[0;32mI (23918) mov:    caja x=31 y=100 w=6 h=8 area=38 | contacto con el suelo (69.5, 215.5)[0m
+[0;32mI (24052) mov: cuadro 137: 1 mancha(s), desfase 1, 49436 us[0m
+[0;32mI (24052) mov:    caja x=31 y=100 w=6 h=8 area=39 | contacto con el suelo (68.5, 215.5)[0m
+[0;32mI (24186) mov: cuadro 138: 1 mancha(s), desfase 1, 49482 us[0m
+[0;32mI (24187) mov:    caja x=30 y=100 w=7 h=11 area=59 | contacto con el suelo (67.5, 221.5)[0m
+[0;32mI (24321) mov: cuadro 139: 1 mancha(s), desfase 1, 49439 us[0m
+[0;32mI (24321) mov:    caja x=30 y=101 w=7 h=10 area=60 | contacto con el suelo (65.5, 221.5)[0m
+[0;32mI (24456) mov: cuadro 140: 1 mancha(s), desfase 1, 49492 us[0m
+[0;32mI (24456) mov:    caja x=29 y=101 w=7 h=10 area=65 | contacto con el suelo (64.5, 221.5)[0m
+[0;32mI (24590) mov: cuadro 141: 1 mancha(s), desfase 1, 49447 us[0m
+[0;32mI (24590) mov:    caja x=28 y=102 w=8 h=9 area=69 | contacto con el suelo (63.5, 221.5)[0m
+[0;32mI (24725) mov: cuadro 142: 1 mancha(s), desfase 1, 49497 us[0m
+[0;32mI (24725) mov:    caja x=27 y=103 w=9 h=8 area=65 | contacto con el suelo (62.5, 221.5)[0m
+[0;32mI (24859) mov: cuadro 143: 1 mancha(s), desfase 1, 49446 us[0m
+[0;32mI (24859) mov:    caja x=27 y=103 w=9 h=8 area=64 | contacto con el suelo (61.5, 221.5)[0m
+[0;32mI (24994) mov: cuadro 144: 1 mancha(s), desfase 2, 49498 us[0m
+[0;32mI (24994) mov:    caja x=27 y=103 w=9 h=9 area=66 | contacto con el suelo (61.5, 223.5)[0m
+[0;32mI (25128) mov: cuadro 145: 1 mancha(s), desfase 2, 49446 us[0m
+[0;32mI (25128) mov:    caja x=26 y=104 w=10 h=8 area=63 | contacto con el suelo (59.5, 223.5)[0m
+[0;32mI (25262) mov: cuadro 146: 1 mancha(s), desfase 2, 49488 us[0m
+[0;32mI (25263) mov:    caja x=26 y=104 w=9 h=8 area=56 | contacto con el suelo (58.5, 223.5)[0m
+[0;32mI (25396) mov: cuadro 147: 1 mancha(s), desfase 1, 49442 us[0m
+[0;32mI (25397) mov:    caja x=26 y=104 w=9 h=8 area=56 | contacto con el suelo (58.5, 223.5)[0m
+[0;32mI (25531) mov: cuadro 148: 1 mancha(s), desfase 1, 49496 us[0m
+[0;32mI (25531) mov:    caja x=26 y=103 w=9 h=8 area=62 | contacto con el suelo (59.5, 221.5)[0m
+[0;32mI (25665) mov: cuadro 149: 1 mancha(s), desfase 1, 49443 us[0m
+[0;32mI (25665) mov:    caja x=28 y=102 w=8 h=9 area=58 | contacto con el suelo (63.5, 221.5)[0m
+[0;32mI (25800) mov: cuadro 150: 1 mancha(s), desfase 2, 49485 us[0m
+[0;32mI (25800) mov:    caja x=30 y=102 w=6 h=9 area=46 | contacto con el suelo (66.5, 221.5)[0m
+[0;32mI (25934) mov: cuadro 151: 1 mancha(s), desfase 2, 49431 us[0m
+[0;32mI (25934) mov:    caja x=31 y=103 w=6 h=8 area=41 | contacto con el suelo (68.5, 221.5)[0m
+[0;32mI (26069) mov: cuadro 152: 1 mancha(s), desfase 2, 49486 us[0m
+[0;32mI (26069) mov:    caja x=30 y=104 w=7 h=7 area=43 | contacto con el suelo (66.5, 221.5)[0m
+[0;32mI (26203) mov: cuadro 153: 1 mancha(s), desfase 3, 49433 us[0m
+[0;32mI (26203) mov:    caja x=29 y=107 w=8 h=4 area=31 | contacto con el suelo (65.5, 221.5)[0m

@@ -1,0 +1,1282 @@
+Command: /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis/proyectos/medidor/build/medidor.elf /home/dennis/proyectos/medidor/build/bootloader/bootloader.elf -m '/home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dennis/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (102) esp_image: segment 1: paddr=000225b0 vaddr=3fc97600 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42007ddf
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1668
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x3178
+entry 0x403c894c
+[0;32mI (24) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 15 2026 17:28:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.4[0m
+[0;32mI (31) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=12588h ( 75144) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=000225b0 vaddr=3fc97600 size=05d54h ( 23892) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0002830c vaddr=40378000 size=07d0ch ( 32012) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=3927ch (234108) map[0m
+[0;32mI (151) esp_image: segment 4: paddr=000692a4 vaddr=4037fd0c size=078c8h ( 30920) load[0m
+[0;32mI (157) esp_image: segment 5: paddr=00070b74 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (176) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (176) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (178) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (182) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (187) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (191) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (196) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (201) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (205) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (210) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (214) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (219) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (222) esp_psram: Speed: 80MHz[0m
+[0;32mI (225) cpu_start: Multicore app[0m
+[0;32mI (514) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (522) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (522) cpu_start: Pro cpu start user code[0m
+[0;32mI (522) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (524) app_init: Application information:[0m
+[0;32mI (528) app_init: Project name:     medidor[0m
+[0;32mI (532) app_init: App version:      1[0m
+[0;32mI (535) app_init: Compile time:     Oct 15 2026 17:28:07[0m
+[0;32mI (540) app_init: ELF file SHA256:  afd503446...[0m
+[0;32mI (544) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (548) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (552) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (556) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (560) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (566) heap_init: At 3FC9EDD8 len 0004A938 (298 KiB): RAM[0m
+[0;32mI (571) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (577) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (582) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (589) spi_flash: detected chip: boya[0m
+[0;32mI (592) spi_flash: flash io: qio[0m
+[0;32mI (595) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (601) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (608) main_task: Started on CPU0[0m
+[0;32mI (611) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+Name: SD   
+Type: SDHC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 59200MB
+CSD: ver=2, sector_size=512, capacity=121241600 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (666) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (669) cam_hal: cam init ok[0m
+[0;32mI (672) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (675) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (689) ov3640: Mismatch PID=0x5640[0m
+[0;32mI (690) ov3660: Mismatch PID=0x5640[0m
+[0;32mI (692) camera: Camera PID=0x5640 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (692) camera: Detected OV5640 camera[0m
+[0;32mI (694) camera: Detected camera at address=0x3c[0m
+[0;32mI (1383) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1383) s3 ll_cam: node_size: 3840, nodes_per_line: 1, lines_per_node: 6[0m
+[0;32mI (1383) s3 ll_cam: dma_half_buffer_min:  3840, dma_half_buffer: 15360, lines_per_half_buffer: 24, dma_buffer_size: 30720[0m
+[0;32mI (1393) cam_hal: buffer_size: 30720, half_buffer_size: 15360, node_buffer_size: 3840, node_cnt: 8, total_cnt: 10[0m
+[0;32mI (1403) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1408) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1414) cam_hal: cam config ok[0m
+[0;32mI (1428) ov5640: Set PLL: bypass: 0, multiplier: 8, sys_div: 1, pre_div: 1, root_2x: 0, pclk_root_div: 1, pclk_manual: 1, pclk_div: 4[0m
+[0;32mI (1429) ov5640: Calculated XVCLK: 20000000 Hz, REFIN: 20000000 Hz, VCO: 160000000 Hz, PLL_CLK: 64000000 Hz, SYSCLK: 16000000 Hz, PCLK: 8000000 Hz[0m
+[0;33mW (5482) mov: >>> FASE 1 (30 s): NO mueva nada. El primer cuadro es el fondo.[0m
+[0;33mW (36246) mov: >>> FASE 2 (40 s): AHORA mueva algo frente a la cámara, lejos del borde inferior de la imagen.[0m
+[0;32mI (42030) mov: [fase 2] cuadro 267: 2 mancha(s), desfase -23, 50427 us[0m
+[0;32mI (42030) mov:    caja x=140 y=25 w=20 h=11 area=135 | contacto con el suelo (311.5, 71.5)[0m
+[0;32mI (42033) mov:    caja x=35 y=44 w=7 h=5 area=31 | contacto con el suelo (76.5, 97.5)[0m
+[0;32mI (42848) mov: [fase 2] cuadro 268: 1 mancha(s), desfase -23, 50967 us[0m
+[0;32mI (42848) mov:    caja x=35 y=43 w=8 h=12 area=60 | contacto con el suelo (74.5, 109.5)[0m
+[0;32mI (42964) mov: [fase 2] cuadro 269: 7 mancha(s), desfase -21, 50657 us[0m
+[0;32mI (42964) mov:    caja x=42 y=0 w=24 h=10 area=180 | contacto con el suelo (107.5, 19.5)[0m
+[0;32mI (42967) mov:    caja x=121 y=0 w=31 h=15 area=260 | contacto con el suelo (273.5, 29.5)[0m
+[0;32mI (42975) mov:    caja x=66 y=14 w=10 h=18 area=83 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (42983) mov:    caja x=46 y=19 w=9 h=8 area=47 | contacto con el suelo (102.5, 53.5)[0m
+[0;32mI (42990) mov:    caja x=104 y=24 w=56 h=10 area=368 | contacto con el suelo (263.5, 67.5)[0m
+[0;32mI (42998) mov:    caja x=35 y=43 w=10 h=12 area=68 | contacto con el suelo (74.5, 109.5)[0m
+[0;32mI (43007) mov:    caja x=50 y=39 w=96 h=17 area=1139 | contacto con el suelo (173.5, 111.5)[0m
+[0;32mI (43097) mov: [fase 2] cuadro 270: 7 mancha(s), desfase -19, 50554 us[0m
+[0;32mI (43097) mov:    caja x=46 y=0 w=20 h=11 area=150 | contacto con el suelo (110.5, 21.5)[0m
+[0;32mI (43100) mov:    caja x=122 y=3 w=29 h=11 area=193 | contacto con el suelo (272.5, 27.5)[0m
+[0;32mI (43108) mov:    caja x=64 y=16 w=11 h=17 area=92 | contacto con el suelo (144.5, 65.5)[0m
+[0;32mI (43116) mov:    caja x=46 y=19 w=12 h=13 area=74 | contacto con el suelo (106.5, 63.5)[0m
+[0;32mI (43124) mov:    caja x=104 y=23 w=56 h=12 area=428 | contacto con el suelo (263.5, 69.5)[0m
+[0;32mI (43132) mov:    caja x=50 y=40 w=96 h=16 area=989 | contacto con el suelo (162.5, 111.5)[0m
+[0;32mI (43140) mov:    caja x=35 y=43 w=8 h=6 area=42 | contacto con el suelo (77.5, 97.5)[0m
+[0;32mI (43948) mov: [fase 2] cuadro 271: 6 mancha(s), desfase -14, 50923 us[0m
+[0;32mI (43948) mov:    caja x=44 y=0 w=21 h=14 area=124 | contacto con el suelo (92.5, 27.5)[0m
+[0;32mI (43951) mov:    caja x=121 y=0 w=31 h=15 area=296 | contacto con el suelo (274.5, 29.5)[0m
+[0;32mI (43959) mov:    caja x=46 y=19 w=8 h=7 area=41 | contacto con el suelo (100.5, 51.5)[0m
+[0;32mI (43966) mov:    caja x=79 y=23 w=81 h=33 area=1163 | contacto con el suelo (221.5, 111.5)[0m
+[0;32mI (43974) mov:    caja x=35 y=42 w=10 h=12 area=85 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (43982) mov:    caja x=51 y=40 w=25 h=16 area=260 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (44041) mov: [fase 2] cuadro 272: 7 mancha(s), desfase -14, 50826 us[0m
+[0;32mI (44041) mov:    caja x=46 y=0 w=19 h=13 area=85 | contacto con el suelo (96.5, 25.5)[0m
+[0;32mI (44044) mov:    caja x=122 y=0 w=29 h=15 area=284 | contacto con el suelo (273.5, 29.5)[0m
+[0;32mI (44052) mov:    caja x=47 y=19 w=7 h=7 area=37 | contacto con el suelo (100.5, 51.5)[0m
+[0;32mI (44060) mov:    caja x=78 y=23 w=82 h=33 area=1149 | contacto con el suelo (220.5, 111.5)[0m
+[0;32mI (44068) mov:    caja x=71 y=28 w=4 h=4 area=15 | contacto con el suelo (145.5, 63.5)[0m
+[0;32mI (44075) mov:    caja x=35 y=42 w=10 h=12 area=86 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (44083) mov:    caja x=51 y=40 w=25 h=16 area=273 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (44164) mov: [fase 2] cuadro 273: 7 mancha(s), desfase -14, 50564 us[0m
+[0;32mI (44165) mov:    caja x=54 y=0 w=9 h=6 area=39 | contacto con el suelo (118.5, 11.5)[0m
+[0;32mI (44167) mov:    caja x=121 y=0 w=31 h=15 area=330 | contacto con el suelo (272.5, 29.5)[0m
+[0;32mI (44175) mov:    caja x=48 y=7 w=5 h=6 area=24 | contacto con el suelo (100.5, 25.5)[0m
+[0;32mI (44183) mov:    caja x=47 y=19 w=7 h=7 area=37 | contacto con el suelo (100.5, 51.5)[0m
+[0;32mI (44190) mov:    caja x=78 y=23 w=82 h=33 area=1181 | contacto con el suelo (220.5, 111.5)[0m
+[0;32mI (44198) mov:    caja x=35 y=42 w=10 h=12 area=85 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (44206) mov:    caja x=50 y=40 w=26 h=16 area=279 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (45017) mov: [fase 2] cuadro 274: 6 mancha(s), desfase -14, 50977 us[0m
+[0;32mI (45017) mov:    caja x=34 y=0 w=35 h=15 area=166 | contacto con el suelo (75.5, 29.5)[0m
+[0;32mI (45020) mov:    caja x=119 y=0 w=35 h=15 area=356 | contacto con el suelo (272.5, 29.5)[0m
+[0;32mI (45028) mov:    caja x=105 y=22 w=55 h=12 area=424 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (45036) mov:    caja x=79 y=38 w=69 h=19 area=745 | contacto con el suelo (196.5, 113.5)[0m
+[0;32mI (45044) mov:    caja x=50 y=40 w=26 h=16 area=266 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (45052) mov:    caja x=35 y=42 w=10 h=12 area=91 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (45110) mov: [fase 2] cuadro 275: 5 mancha(s), desfase -13, 50867 us[0m
+[0;32mI (45111) mov:    caja x=34 y=0 w=31 h=26 area=146 | contacto con el suelo (101.5, 51.5)[0m
+[0;32mI (45114) mov:    caja x=121 y=0 w=31 h=15 area=315 | contacto con el suelo (271.5, 29.5)[0m
+[0;32mI (45121) mov:    caja x=35 y=42 w=10 h=12 area=89 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (45129) mov:    caja x=79 y=22 w=81 h=32 area=1149 | contacto con el suelo (227.5, 107.5)[0m
+[0;32mI (45137) mov:    caja x=50 y=40 w=26 h=16 area=258 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (45231) mov: [fase 2] cuadro 276: 7 mancha(s), desfase -12, 50518 us[0m
+[0;32mI (45231) mov:    caja x=122 y=0 w=30 h=15 area=278 | contacto con el suelo (275.5, 29.5)[0m
+[0;32mI (45234) mov:    caja x=34 y=3 w=27 h=11 area=74 | contacto con el suelo (75.5, 27.5)[0m
+[0;32mI (45242) mov:    caja x=45 y=18 w=11 h=9 area=47 | contacto con el suelo (103.5, 53.5)[0m
+[0;32mI (45250) mov:    caja x=79 y=22 w=81 h=32 area=1149 | contacto con el suelo (227.5, 107.5)[0m
+[0;32mI (45258) mov:    caja x=70 y=28 w=5 h=4 area=18 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (45265) mov:    caja x=35 y=42 w=10 h=12 area=88 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (45273) mov:    caja x=51 y=40 w=23 h=15 area=242 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (46084) mov: [fase 2] cuadro 277: 8 mancha(s), desfase -11, 50949 us[0m
+[0;32mI (46084) mov:    caja x=46 y=0 w=24 h=28 area=193 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (46087) mov:    caja x=120 y=0 w=33 h=14 area=315 | contacto con el suelo (275.5, 27.5)[0m
+[0;32mI (46095) mov:    caja x=38 y=9 w=4 h=6 area=21 | contacto con el suelo (79.5, 29.5)[0m
+[0;32mI (46103) mov:    caja x=35 y=41 w=10 h=13 area=95 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (46111) mov:    caja x=50 y=40 w=24 h=15 area=238 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (46118) mov:    caja x=105 y=22 w=55 h=12 area=474 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (46126) mov:    caja x=71 y=27 w=4 h=4 area=15 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (46134) mov:    caja x=79 y=38 w=69 h=16 area=696 | contacto con el suelo (227.5, 107.5)[0m
+[0;32mI (46193) mov: [fase 2] cuadro 278: 7 mancha(s), desfase -11, 50563 us[0m
+[0;32mI (46193) mov:    caja x=39 y=0 w=32 h=17 area=196 | contacto con el suelo (129.5, 33.5)[0m
+[0;32mI (46196) mov:    caja x=120 y=0 w=33 h=15 area=339 | contacto con el suelo (277.5, 29.5)[0m
+[0;32mI (46204) mov:    caja x=35 y=41 w=10 h=12 area=83 | contacto con el suelo (80.5, 105.5)[0m
+[0;32mI (46212) mov:    caja x=79 y=22 w=81 h=32 area=1140 | contacto con el suelo (216.5, 107.5)[0m
+[0;32mI (46220) mov:    caja x=52 y=23 w=4 h=5 area=18 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (46227) mov:    caja x=71 y=27 w=4 h=4 area=15 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (46235) mov:    caja x=50 y=40 w=24 h=15 area=238 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (46298) mov: [fase 2] cuadro 279: 8 mancha(s), desfase -11, 50578 us[0m
+[0;32mI (46298) mov:    caja x=46 y=0 w=24 h=17 area=170 | contacto con el suelo (130.5, 33.5)[0m
+[0;32mI (46301) mov:    caja x=120 y=0 w=33 h=14 area=323 | contacto con el suelo (275.5, 27.5)[0m
+[0;32mI (46309) mov:    caja x=105 y=22 w=55 h=12 area=471 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (46317) mov:    caja x=52 y=23 w=4 h=5 area=18 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (46324) mov:    caja x=71 y=27 w=4 h=5 area=18 | contacto con el suelo (145.5, 63.5)[0m
+[0;32mI (46332) mov:    caja x=79 y=38 w=69 h=16 area=688 | contacto con el suelo (227.5, 107.5)[0m
+[0;32mI (46340) mov:    caja x=50 y=40 w=24 h=15 area=237 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (46348) mov:    caja x=35 y=41 w=10 h=13 area=92 | contacto con el suelo (77.5, 107.5)[0m
+[0;32mI (47162) mov: [fase 2] cuadro 280: 8 mancha(s), desfase -8, 50924 us[0m
+[0;32mI (47162) mov:    caja x=39 y=0 w=26 h=13 area=97 | contacto con el suelo (87.5, 25.5)[0m
+[0;32mI (47165) mov:    caja x=71 y=0 w=10 h=11 area=76 | contacto con el suelo (151.5, 21.5)[0m
+[0;32mI (47173) mov:    caja x=121 y=0 w=32 h=14 area=317 | contacto con el suelo (280.5, 27.5)[0m
+[0;32mI (47181) mov:    caja x=86 y=21 w=74 h=31 area=1130 | contacto con el suelo (245.5, 103.5)[0m
+[0;32mI (47189) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (47196) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (47204) mov:    caja x=35 y=41 w=10 h=12 area=78 | contacto con el suelo (80.5, 105.5)[0m
+[0;32mI (47212) mov:    caja x=51 y=40 w=23 h=15 area=225 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (47271) mov: [fase 2] cuadro 281: 8 mancha(s), desfase -7, 50827 us[0m
+[0;32mI (47271) mov:    caja x=39 y=0 w=23 h=13 area=87 | contacto con el suelo (87.5, 25.5)[0m
+[0;32mI (47274) mov:    caja x=74 y=0 w=9 h=10 area=52 | contacto con el suelo (156.5, 19.5)[0m
+[0;32mI (47281) mov:    caja x=121 y=0 w=33 h=14 area=299 | contacto con el suelo (282.5, 27.5)[0m
+[0;32mI (47289) mov:    caja x=105 y=21 w=55 h=13 area=519 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (47297) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (47305) mov:    caja x=70 y=27 w=5 h=5 area=23 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (47312) mov:    caja x=87 y=38 w=57 h=13 area=569 | contacto con el suelo (239.5, 101.5)[0m
+[0;32mI (47320) mov:    caja x=51 y=40 w=23 h=15 area=222 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (47379) mov: [fase 2] cuadro 282: 8 mancha(s), desfase -6, 50822 us[0m
+[0;32mI (47379) mov:    caja x=76 y=0 w=6 h=9 area=48 | contacto con el suelo (157.5, 17.5)[0m
+[0;32mI (47382) mov:    caja x=122 y=0 w=34 h=15 area=296 | contacto con el suelo (290.5, 29.5)[0m
+[0;32mI (47390) mov:    caja x=39 y=3 w=22 h=10 area=70 | contacto con el suelo (80.5, 25.5)[0m
+[0;32mI (47398) mov:    caja x=105 y=21 w=55 h=13 area=529 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (47406) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (47413) mov:    caja x=70 y=27 w=5 h=5 area=23 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (47421) mov:    caja x=87 y=38 w=57 h=13 area=543 | contacto con el suelo (238.5, 101.5)[0m
+[0;32mI (47429) mov:    caja x=51 y=40 w=23 h=15 area=210 | contacto con el suelo (135.5, 109.5)[0m
+[0;32mI (48234) mov: [fase 2] cuadro 283: 8 mancha(s), desfase -6, 50870 us[0m
+[0;32mI (48234) mov:    caja x=46 y=0 w=17 h=10 area=86 | contacto con el suelo (107.5, 19.5)[0m
+[0;32mI (48237) mov:    caja x=89 y=0 w=6 h=6 area=33 | contacto con el suelo (183.5, 11.5)[0m
+[0;32mI (48245) mov:    caja x=121 y=0 w=35 h=15 area=362 | contacto con el suelo (287.5, 29.5)[0m
+[0;32mI (48253) mov:    caja x=105 y=20 w=55 h=14 area=527 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (48261) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (48268) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (48276) mov:    caja x=87 y=38 w=57 h=14 area=573 | contacto con el suelo (238.5, 103.5)[0m
+[0;32mI (48284) mov:    caja x=50 y=40 w=24 h=15 area=220 | contacto con el suelo (133.5, 109.5)[0m
+[0;32mI (48343) mov: [fase 2] cuadro 284: 8 mancha(s), desfase -5, 50816 us[0m
+[0;32mI (48343) mov:    caja x=46 y=0 w=16 h=10 area=80 | contacto con el suelo (107.5, 19.5)[0m
+[0;32mI (48346) mov:    caja x=90 y=0 w=6 h=5 area=30 | contacto con el suelo (185.5, 9.5)[0m
+[0;32mI (48353) mov:    caja x=121 y=0 w=33 h=14 area=348 | contacto con el suelo (282.5, 27.5)[0m
+[0;32mI (48361) mov:    caja x=87 y=20 w=73 h=31 area=1103 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (48369) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (48377) mov:    caja x=70 y=27 w=5 h=5 area=23 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (48384) mov:    caja x=50 y=40 w=23 h=14 area=214 | contacto con el suelo (132.5, 107.5)[0m
+[0;32mI (48392) mov:    caja x=35 y=41 w=8 h=9 area=59 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (48451) mov: [fase 2] cuadro 285: 8 mancha(s), desfase -5, 50851 us[0m
+[0;32mI (48451) mov:    caja x=46 y=0 w=16 h=9 area=82 | contacto con el suelo (107.5, 17.5)[0m
+[0;32mI (48454) mov:    caja x=92 y=0 w=8 h=5 area=40 | contacto con el suelo (191.5, 9.5)[0m
+[0;32mI (48461) mov:    caja x=121 y=0 w=32 h=14 area=347 | contacto con el suelo (281.5, 27.5)[0m
+[0;32mI (48469) mov:    caja x=105 y=20 w=55 h=14 area=531 | contacto con el suelo (264.5, 67.5)[0m
+[0;32mI (48477) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (48485) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (48492) mov:    caja x=87 y=38 w=58 h=13 area=578 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (48500) mov:    caja x=50 y=40 w=23 h=14 area=210 | contacto con el suelo (132.5, 107.5)[0m
+[0;32mI (49312) mov: [fase 2] cuadro 286: 8 mancha(s), desfase -4, 50892 us[0m
+[0;32mI (49312) mov:    caja x=55 y=0 w=4 h=7 area=26 | contacto con el suelo (113.5, 13.5)[0m
+[0;32mI (49314) mov:    caja x=61 y=0 w=11 h=11 area=58 | contacto con el suelo (124.5, 21.5)[0m
+[0;32mI (49322) mov:    caja x=104 y=0 w=9 h=4 area=32 | contacto con el suelo (216.5, 7.5)[0m
+[0;32mI (49330) mov:    caja x=121 y=0 w=32 h=13 area=350 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (49338) mov:    caja x=88 y=20 w=72 h=31 area=1140 | contacto con el suelo (240.5, 101.5)[0m
+[0;32mI (49346) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (49353) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (49361) mov:    caja x=50 y=40 w=23 h=13 area=204 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (49420) mov: [fase 2] cuadro 287: 8 mancha(s), desfase -4, 50832 us[0m
+[0;32mI (49420) mov:    caja x=57 y=0 w=5 h=6 area=23 | contacto con el suelo (118.5, 11.5)[0m
+[0;32mI (49423) mov:    caja x=67 y=0 w=7 h=7 area=43 | contacto con el suelo (140.5, 13.5)[0m
+[0;32mI (49430) mov:    caja x=106 y=0 w=9 h=4 area=32 | contacto con el suelo (220.5, 7.5)[0m
+[0;32mI (49438) mov:    caja x=121 y=0 w=33 h=13 area=356 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (49446) mov:    caja x=46 y=6 w=4 h=5 area=18 | contacto con el suelo (95.5, 21.5)[0m
+[0;32mI (49453) mov:    caja x=88 y=19 w=72 h=32 area=1125 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (49461) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (49469) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (49527) mov: [fase 2] cuadro 288: 8 mancha(s), desfase -4, 50502 us[0m
+[0;32mI (49527) mov:    caja x=71 y=0 w=4 h=5 area=19 | contacto con el suelo (145.5, 9.5)[0m
+[0;32mI (49530) mov:    caja x=108 y=0 w=8 h=4 area=31 | contacto con el suelo (223.5, 7.5)[0m
+[0;32mI (49537) mov:    caja x=121 y=0 w=39 h=13 area=394 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (49545) mov:    caja x=46 y=6 w=4 h=4 area=15 | contacto con el suelo (95.5, 19.5)[0m
+[0;32mI (49553) mov:    caja x=88 y=19 w=72 h=32 area=1118 | contacto con el suelo (240.5, 101.5)[0m
+[0;32mI (49561) mov:    caja x=52 y=23 w=5 h=5 area=22 | contacto con el suelo (108.5, 55.5)[0m
+[0;32mI (49568) mov:    caja x=70 y=27 w=5 h=5 area=21 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (49576) mov:    caja x=50 y=40 w=23 h=14 area=209 | contacto con el suelo (132.5, 107.5)[0m
+[0;32mI (50389) mov: [fase 2] cuadro 289: 7 mancha(s), desfase -3, 50914 us[0m
+[0;32mI (50389) mov:    caja x=46 y=0 w=13 h=9 area=43 | contacto con el suelo (99.5, 17.5)[0m
+[0;32mI (50391) mov:    caja x=121 y=0 w=39 h=13 area=431 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (50399) mov:    caja x=88 y=19 w=72 h=32 area=1128 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (50407) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (50415) mov:    caja x=70 y=27 w=5 h=5 area=22 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (50423) mov:    caja x=35 y=40 w=10 h=10 area=74 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (50430) mov:    caja x=50 y=40 w=23 h=13 area=204 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (50488) mov: [fase 2] cuadro 290: 7 mancha(s), desfase -3, 49836 us[0m
+[0;32mI (50489) mov:    caja x=55 y=0 w=7 h=5 area=33 | contacto con el suelo (116.5, 9.5)[0m
+[0;32mI (50491) mov:    caja x=121 y=0 w=39 h=13 area=415 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (50499) mov:    caja x=88 y=19 w=72 h=32 area=1132 | contacto con el suelo (238.5, 101.5)[0m
+[0;32mI (50507) mov:    caja x=52 y=23 w=5 h=5 area=22 | contacto con el suelo (108.5, 55.5)[0m
+[0;32mI (50515) mov:    caja x=70 y=26 w=5 h=6 area=25 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (50522) mov:    caja x=35 y=40 w=10 h=12 area=84 | contacto con el suelo (77.5, 103.5)[0m
+[0;32mI (50530) mov:    caja x=50 y=40 w=23 h=13 area=204 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (50699) mov: [fase 2] cuadro 291: 8 mancha(s), desfase -2, 50494 us[0m
+[0;32mI (50700) mov:    caja x=55 y=0 w=4 h=5 area=20 | contacto con el suelo (113.5, 9.5)[0m
+[0;32mI (50702) mov:    caja x=122 y=0 w=38 h=13 area=388 | contacto con el suelo (281.5, 25.5)[0m
+[0;32mI (50710) mov:    caja x=46 y=5 w=6 h=4 area=20 | contacto con el suelo (97.5, 17.5)[0m
+[0;32mI (50717) mov:    caja x=36 y=11 w=4 h=4 area=15 | contacto con el suelo (75.5, 29.5)[0m
+[0;32mI (50725) mov:    caja x=88 y=19 w=72 h=32 area=1134 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (50733) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (50741) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (50748) mov:    caja x=35 y=40 w=9 h=10 area=74 | contacto con el suelo (79.5, 99.5)[0m
+[0;32mI (50833) mov: [fase 2] cuadro 292: 7 mancha(s), desfase -2, 50496 us[0m
+[0;32mI (50833) mov:    caja x=55 y=0 w=4 h=5 area=20 | contacto con el suelo (113.5, 9.5)[0m
+[0;32mI (50835) mov:    caja x=122 y=0 w=38 h=13 area=363 | contacto con el suelo (281.5, 25.5)[0m
+[0;32mI (50843) mov:    caja x=88 y=18 w=72 h=33 area=1142 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (50851) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (50859) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (50867) mov:    caja x=35 y=40 w=10 h=10 area=77 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (50874) mov:    caja x=50 y=40 w=23 h=13 area=204 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (50966) mov: [fase 2] cuadro 293: 8 mancha(s), desfase -2, 50454 us[0m
+[0;32mI (50966) mov:    caja x=55 y=0 w=4 h=5 area=20 | contacto con el suelo (113.5, 9.5)[0m
+[0;32mI (50969) mov:    caja x=121 y=0 w=39 h=13 area=338 | contacto con el suelo (283.5, 25.5)[0m
+[0;32mI (50977) mov:    caja x=48 y=6 w=6 h=5 area=30 | contacto con el suelo (101.5, 21.5)[0m
+[0;32mI (50984) mov:    caja x=88 y=19 w=72 h=32 area=1125 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (50992) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (51000) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51008) mov:    caja x=35 y=40 w=10 h=10 area=75 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (51015) mov:    caja x=50 y=40 w=23 h=13 area=204 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51099) mov: [fase 2] cuadro 294: 7 mancha(s), desfase -1, 50487 us[0m
+[0;32mI (51100) mov:    caja x=122 y=0 w=38 h=13 area=334 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (51103) mov:    caja x=45 y=5 w=13 h=6 area=59 | contacto con el suelo (104.5, 21.5)[0m
+[0;32mI (51110) mov:    caja x=88 y=18 w=72 h=32 area=1145 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (51118) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (51126) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51133) mov:    caja x=35 y=40 w=8 h=10 area=66 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (51141) mov:    caja x=50 y=40 w=23 h=13 area=201 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51233) mov: [fase 2] cuadro 295: 7 mancha(s), desfase -1, 50471 us[0m
+[0;32mI (51233) mov:    caja x=122 y=0 w=38 h=13 area=313 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (51236) mov:    caja x=49 y=4 w=11 h=8 area=59 | contacto con el suelo (102.5, 23.5)[0m
+[0;32mI (51244) mov:    caja x=88 y=19 w=72 h=32 area=1169 | contacto con el suelo (237.5, 101.5)[0m
+[0;32mI (51252) mov:    caja x=52 y=23 w=5 h=6 area=25 | contacto con el suelo (108.5, 57.5)[0m
+[0;32mI (51259) mov:    caja x=70 y=26 w=6 h=6 area=29 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51267) mov:    caja x=50 y=39 w=23 h=14 area=198 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51275) mov:    caja x=35 y=40 w=9 h=10 area=71 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (51366) mov: [fase 2] cuadro 296: 7 mancha(s), desfase -1, 50525 us[0m
+[0;32mI (51367) mov:    caja x=122 y=0 w=38 h=13 area=371 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (51369) mov:    caja x=46 y=3 w=18 h=7 area=77 | contacto con el suelo (106.5, 19.5)[0m
+[0;32mI (51377) mov:    caja x=88 y=18 w=72 h=32 area=1147 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (51385) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (51393) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51400) mov:    caja x=50 y=39 w=23 h=14 area=209 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51408) mov:    caja x=35 y=40 w=8 h=10 area=66 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (51500) mov: [fase 2] cuadro 297: 7 mancha(s), desfase -1, 50510 us[0m
+[0;32mI (51500) mov:    caja x=55 y=0 w=10 h=10 area=80 | contacto con el suelo (116.5, 19.5)[0m
+[0;32mI (51503) mov:    caja x=122 y=0 w=38 h=13 area=336 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (51511) mov:    caja x=88 y=18 w=72 h=32 area=1185 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (51519) mov:    caja x=52 y=23 w=5 h=6 area=25 | contacto con el suelo (108.5, 57.5)[0m
+[0;32mI (51526) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51534) mov:    caja x=50 y=39 w=23 h=14 area=209 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51542) mov:    caja x=35 y=40 w=9 h=10 area=72 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (51633) mov: [fase 2] cuadro 298: 8 mancha(s), desfase -1, 50483 us[0m
+[0;32mI (51633) mov:    caja x=56 y=0 w=12 h=9 area=61 | contacto con el suelo (119.5, 17.5)[0m
+[0;32mI (51636) mov:    caja x=122 y=0 w=29 h=13 area=264 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (51644) mov:    caja x=156 y=0 w=4 h=9 area=36 | contacto con el suelo (315.5, 17.5)[0m
+[0;32mI (51652) mov:    caja x=88 y=17 w=72 h=33 area=1172 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (51660) mov:    caja x=52 y=23 w=4 h=5 area=19 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (51667) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51675) mov:    caja x=50 y=38 w=23 h=15 area=203 | contacto con el suelo (132.5, 105.5)[0m
+[0;32mI (51683) mov:    caja x=35 y=40 w=10 h=10 area=81 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (51767) mov: [fase 2] cuadro 299: 7 mancha(s), desfase -1, 50452 us[0m
+[0;32mI (51767) mov:    caja x=60 y=0 w=10 h=7 area=43 | contacto con el suelo (127.5, 13.5)[0m
+[0;32mI (51769) mov:    caja x=122 y=0 w=31 h=13 area=274 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (51777) mov:    caja x=88 y=18 w=72 h=32 area=1189 | contacto con el suelo (232.5, 99.5)[0m
+[0;32mI (51785) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (51793) mov:    caja x=70 y=26 w=5 h=5 area=23 | contacto con el suelo (144.5, 61.5)[0m
+[0;32mI (51801) mov:    caja x=50 y=38 w=23 h=15 area=205 | contacto con el suelo (133.5, 105.5)[0m
+[0;32mI (51809) mov:    caja x=35 y=39 w=10 h=11 area=84 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (51900) mov: [fase 2] cuadro 300: 7 mancha(s), desfase 0, 50453 us[0m
+[0;32mI (51900) mov:    caja x=66 y=0 w=7 h=4 area=25 | contacto con el suelo (138.5, 7.5)[0m
+[0;32mI (51903) mov:    caja x=122 y=0 w=31 h=13 area=265 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (51910) mov:    caja x=88 y=17 w=72 h=33 area=1171 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (51918) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (51926) mov:    caja x=70 y=26 w=6 h=6 area=29 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (51934) mov:    caja x=50 y=38 w=23 h=15 area=204 | contacto con el suelo (133.5, 105.5)[0m
+[0;32mI (51942) mov:    caja x=35 y=39 w=10 h=11 area=77 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52033) mov: [fase 2] cuadro 301: 7 mancha(s), desfase 0, 50433 us[0m
+[0;32mI (52034) mov:    caja x=68 y=0 w=7 h=3 area=19 | contacto con el suelo (142.5, 5.5)[0m
+[0;32mI (52036) mov:    caja x=122 y=0 w=31 h=13 area=265 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (52044) mov:    caja x=88 y=18 w=72 h=32 area=1190 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (52052) mov:    caja x=52 y=23 w=4 h=6 area=22 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (52059) mov:    caja x=70 y=26 w=6 h=6 area=28 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52067) mov:    caja x=50 y=38 w=23 h=15 area=210 | contacto con el suelo (133.5, 105.5)[0m
+[0;32mI (52075) mov:    caja x=35 y=39 w=10 h=11 area=84 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52167) mov: [fase 2] cuadro 302: 6 mancha(s), desfase 0, 50451 us[0m
+[0;32mI (52167) mov:    caja x=122 y=0 w=30 h=13 area=261 | contacto con el suelo (278.5, 25.5)[0m
+[0;32mI (52170) mov:    caja x=88 y=18 w=72 h=32 area=1182 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (52178) mov:    caja x=50 y=22 w=7 h=6 area=29 | contacto con el suelo (108.5, 55.5)[0m
+[0;32mI (52185) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52193) mov:    caja x=50 y=38 w=22 h=14 area=207 | contacto con el suelo (126.5, 103.5)[0m
+[0;32mI (52201) mov:    caja x=35 y=39 w=10 h=11 area=84 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52300) mov: [fase 2] cuadro 303: 7 mancha(s), desfase 0, 50402 us[0m
+[0;32mI (52300) mov:    caja x=122 y=0 w=31 h=13 area=273 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (52303) mov:    caja x=106 y=17 w=54 h=14 area=529 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (52311) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (52319) mov:    caja x=70 y=26 w=5 h=6 area=26 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52326) mov:    caja x=88 y=36 w=59 h=14 area=607 | contacto con el suelo (234.5, 99.5)[0m
+[0;32mI (52334) mov:    caja x=50 y=38 w=22 h=14 area=200 | contacto con el suelo (132.5, 103.5)[0m
+[0;32mI (52342) mov:    caja x=35 y=39 w=10 h=11 area=84 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52434) mov: [fase 2] cuadro 304: 6 mancha(s), desfase 1, 50426 us[0m
+[0;32mI (52434) mov:    caja x=122 y=0 w=31 h=13 area=263 | contacto con el suelo (280.5, 25.5)[0m
+[0;32mI (52437) mov:    caja x=88 y=17 w=72 h=33 area=1138 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (52445) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (52452) mov:    caja x=70 y=26 w=6 h=6 area=29 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52460) mov:    caja x=50 y=38 w=22 h=14 area=200 | contacto con el suelo (132.5, 103.5)[0m
+[0;32mI (52468) mov:    caja x=35 y=39 w=10 h=11 area=81 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52567) mov: [fase 2] cuadro 305: 6 mancha(s), desfase 1, 50412 us[0m
+[0;32mI (52567) mov:    caja x=122 y=0 w=30 h=13 area=252 | contacto con el suelo (279.5, 25.5)[0m
+[0;32mI (52570) mov:    caja x=88 y=17 w=72 h=33 area=1167 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (52578) mov:    caja x=50 y=22 w=7 h=7 area=32 | contacto con el suelo (108.5, 57.5)[0m
+[0;32mI (52586) mov:    caja x=70 y=26 w=6 h=6 area=28 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52593) mov:    caja x=50 y=38 w=23 h=14 area=201 | contacto con el suelo (133.5, 103.5)[0m
+[0;32mI (52601) mov:    caja x=35 y=39 w=10 h=11 area=81 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52700) mov: [fase 2] cuadro 306: 6 mancha(s), desfase 1, 50422 us[0m
+[0;32mI (52701) mov:    caja x=122 y=0 w=31 h=13 area=255 | contacto con el suelo (280.5, 25.5)[0m
+[0;32mI (52704) mov:    caja x=88 y=17 w=72 h=33 area=1144 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (52712) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (52719) mov:    caja x=70 y=26 w=6 h=6 area=28 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52727) mov:    caja x=35 y=39 w=10 h=11 area=80 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52735) mov:    caja x=50 y=39 w=22 h=13 area=195 | contacto con el suelo (132.5, 103.5)[0m
+[0;32mI (52834) mov: [fase 2] cuadro 307: 7 mancha(s), desfase 1, 50386 us[0m
+[0;32mI (52834) mov:    caja x=122 y=0 w=29 h=13 area=251 | contacto con el suelo (280.5, 25.5)[0m
+[0;32mI (52837) mov:    caja x=106 y=17 w=54 h=14 area=545 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (52845) mov:    caja x=50 y=22 w=6 h=7 area=29 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (52853) mov:    caja x=70 y=26 w=5 h=6 area=25 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52860) mov:    caja x=88 y=36 w=59 h=14 area=575 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (52868) mov:    caja x=35 y=39 w=10 h=11 area=83 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (52876) mov:    caja x=50 y=39 w=22 h=13 area=195 | contacto con el suelo (132.5, 103.5)[0m
+[0;32mI (52967) mov: [fase 2] cuadro 308: 7 mancha(s), desfase 1, 50394 us[0m
+[0;32mI (52968) mov:    caja x=122 y=0 w=30 h=13 area=253 | contacto con el suelo (280.5, 25.5)[0m
+[0;32mI (52970) mov:    caja x=106 y=17 w=54 h=14 area=549 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (52978) mov:    caja x=50 y=22 w=6 h=7 area=33 | contacto con el suelo (106.5, 57.5)[0m
+[0;32mI (52986) mov:    caja x=70 y=26 w=5 h=6 area=25 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (52994) mov:    caja x=88 y=36 w=59 h=14 area=551 | contacto con el suelo (231.5, 99.5)[0m
+[0;32mI (53002) mov:    caja x=35 y=39 w=10 h=11 area=83 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53009) mov:    caja x=50 y=39 w=22 h=12 area=188 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53101) mov: [fase 2] cuadro 309: 6 mancha(s), desfase 1, 50360 us[0m
+[0;32mI (53101) mov:    caja x=106 y=0 w=54 h=31 area=793 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53104) mov:    caja x=35 y=39 w=10 h=11 area=83 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53112) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (53119) mov:    caja x=70 y=26 w=5 h=6 area=25 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (53127) mov:    caja x=88 y=36 w=59 h=13 area=555 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53135) mov:    caja x=50 y=38 w=22 h=13 area=190 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53234) mov: [fase 2] cuadro 310: 6 mancha(s), desfase 1, 50383 us[0m
+[0;32mI (53235) mov:    caja x=106 y=0 w=54 h=31 area=799 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53237) mov:    caja x=50 y=39 w=22 h=12 area=187 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53245) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (53253) mov:    caja x=70 y=26 w=5 h=6 area=25 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (53261) mov:    caja x=88 y=36 w=59 h=14 area=572 | contacto con el suelo (233.5, 99.5)[0m
+[0;32mI (53269) mov:    caja x=35 y=39 w=10 h=11 area=82 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53368) mov: [fase 2] cuadro 311: 6 mancha(s), desfase 2, 50348 us[0m
+[0;32mI (53368) mov:    caja x=106 y=0 w=54 h=31 area=793 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53371) mov:    caja x=35 y=39 w=10 h=11 area=83 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53379) mov:    caja x=50 y=22 w=6 h=7 area=33 | contacto con el suelo (106.5, 57.5)[0m
+[0;32mI (53386) mov:    caja x=70 y=26 w=5 h=5 area=22 | contacto con el suelo (144.5, 61.5)[0m
+[0;32mI (53394) mov:    caja x=89 y=36 w=58 h=13 area=533 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53402) mov:    caja x=50 y=38 w=22 h=13 area=191 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53501) mov: [fase 2] cuadro 312: 6 mancha(s), desfase 1, 50368 us[0m
+[0;32mI (53502) mov:    caja x=106 y=0 w=54 h=31 area=791 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53504) mov:    caja x=35 y=39 w=10 h=11 area=85 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53512) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (53520) mov:    caja x=70 y=26 w=5 h=5 area=22 | contacto con el suelo (144.5, 61.5)[0m
+[0;32mI (53527) mov:    caja x=88 y=36 w=59 h=13 area=540 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53535) mov:    caja x=50 y=38 w=22 h=13 area=192 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53635) mov: [fase 2] cuadro 313: 6 mancha(s), desfase 2, 50323 us[0m
+[0;32mI (53635) mov:    caja x=106 y=0 w=54 h=31 area=783 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53638) mov:    caja x=50 y=39 w=22 h=12 area=189 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (53646) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (53653) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (53661) mov:    caja x=89 y=36 w=58 h=13 area=524 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53669) mov:    caja x=35 y=39 w=9 h=11 area=75 | contacto con el suelo (79.5, 99.5)[0m
+[0;32mI (53768) mov: [fase 2] cuadro 314: 7 mancha(s), desfase 2, 50347 us[0m
+[0;32mI (53768) mov:    caja x=122 y=0 w=27 h=12 area=226 | contacto con el suelo (276.5, 23.5)[0m
+[0;32mI (53771) mov:    caja x=106 y=16 w=54 h=15 area=558 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53779) mov:    caja x=50 y=22 w=7 h=7 area=36 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (53787) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (53794) mov:    caja x=89 y=36 w=58 h=13 area=523 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53802) mov:    caja x=35 y=39 w=10 h=11 area=84 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53810) mov:    caja x=50 y=39 w=22 h=12 area=180 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (53902) mov: [fase 2] cuadro 315: 6 mancha(s), desfase 2, 50324 us[0m
+[0;32mI (53902) mov:    caja x=106 y=0 w=54 h=31 area=770 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (53905) mov:    caja x=35 y=39 w=10 h=11 area=82 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (53912) mov:    caja x=50 y=22 w=6 h=7 area=33 | contacto con el suelo (106.5, 57.5)[0m
+[0;32mI (53920) mov:    caja x=70 y=26 w=5 h=6 area=24 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (53928) mov:    caja x=89 y=36 w=58 h=13 area=526 | contacto con el suelo (231.5, 97.5)[0m
+[0;32mI (53936) mov:    caja x=50 y=38 w=22 h=13 area=192 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (54035) mov: [fase 2] cuadro 316: 7 mancha(s), desfase 2, 50342 us[0m
+[0;32mI (54035) mov:    caja x=122 y=0 w=29 h=12 area=225 | contacto con el suelo (276.5, 23.5)[0m
+[0;32mI (54038) mov:    caja x=106 y=16 w=54 h=15 area=541 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (54046) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54054) mov:    caja x=70 y=26 w=5 h=6 area=24 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (54061) mov:    caja x=89 y=36 w=58 h=13 area=521 | contacto con el suelo (233.5, 97.5)[0m
+[0;32mI (54069) mov:    caja x=50 y=37 w=22 h=14 area=194 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (54077) mov:    caja x=35 y=39 w=10 h=11 area=87 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (54168) mov: [fase 2] cuadro 317: 7 mancha(s), desfase 2, 50318 us[0m
+[0;32mI (54169) mov:    caja x=122 y=0 w=26 h=12 area=219 | contacto con el suelo (276.5, 23.5)[0m
+[0;32mI (54172) mov:    caja x=106 y=16 w=54 h=15 area=539 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (54180) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54187) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54195) mov:    caja x=89 y=36 w=58 h=13 area=526 | contacto con el suelo (233.5, 97.5)[0m
+[0;32mI (54203) mov:    caja x=50 y=38 w=22 h=13 area=191 | contacto con el suelo (124.5, 101.5)[0m
+[0;32mI (54211) mov:    caja x=35 y=39 w=9 h=11 area=84 | contacto con el suelo (79.5, 99.5)[0m
+[0;32mI (54302) mov: [fase 2] cuadro 318: 6 mancha(s), desfase 3, 50326 us[0m
+[0;32mI (54302) mov:    caja x=106 y=0 w=54 h=31 area=776 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (54305) mov:    caja x=35 y=39 w=8 h=11 area=73 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (54313) mov:    caja x=50 y=22 w=6 h=7 area=29 | contacto con el suelo (107.5, 57.5)[0m
+[0;32mI (54320) mov:    caja x=70 y=26 w=5 h=6 area=24 | contacto con el suelo (144.5, 63.5)[0m
+[0;32mI (54328) mov:    caja x=90 y=36 w=56 h=13 area=503 | contacto con el suelo (233.5, 97.5)[0m
+[0;32mI (54336) mov:    caja x=50 y=38 w=22 h=13 area=183 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (54435) mov: [fase 2] cuadro 319: 7 mancha(s), desfase 3, 50310 us[0m
+[0;32mI (54436) mov:    caja x=122 y=0 w=26 h=12 area=215 | contacto con el suelo (276.5, 23.5)[0m
+[0;32mI (54438) mov:    caja x=106 y=16 w=54 h=15 area=550 | contacto con el suelo (265.5, 61.5)[0m
+[0;32mI (54446) mov:    caja x=50 y=22 w=6 h=7 area=33 | contacto con el suelo (106.5, 57.5)[0m
+[0;32mI (54454) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54462) mov:    caja x=90 y=36 w=57 h=13 area=502 | contacto con el suelo (233.5, 97.5)[0m
+[0;32mI (54470) mov:    caja x=50 y=38 w=22 h=13 area=182 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (54478) mov:    caja x=35 y=39 w=10 h=11 area=82 | contacto con el suelo (80.5, 99.5)[0m
+[0;32mI (54569) mov: [fase 2] cuadro 320: 6 mancha(s), desfase 2, 50307 us[0m
+[0;32mI (54569) mov:    caja x=107 y=0 w=53 h=30 area=754 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (54572) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54579) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54587) mov:    caja x=89 y=35 w=57 h=13 area=482 | contacto con el suelo (225.5, 95.5)[0m
+[0;32mI (54595) mov:    caja x=50 y=37 w=22 h=14 area=190 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (54603) mov:    caja x=35 y=38 w=9 h=12 area=86 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (54702) mov: [fase 2] cuadro 321: 6 mancha(s), desfase 2, 50284 us[0m
+[0;32mI (54702) mov:    caja x=107 y=0 w=53 h=30 area=752 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (54705) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54712) mov:    caja x=71 y=26 w=4 h=5 area=19 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54720) mov:    caja x=89 y=35 w=57 h=13 area=486 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (54728) mov:    caja x=50 y=37 w=22 h=14 area=187 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (54736) mov:    caja x=35 y=38 w=10 h=12 area=91 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (54835) mov: [fase 2] cuadro 322: 6 mancha(s), desfase 2, 50299 us[0m
+[0;32mI (54835) mov:    caja x=107 y=0 w=53 h=30 area=735 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (54838) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54845) mov:    caja x=71 y=26 w=4 h=5 area=18 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54853) mov:    caja x=89 y=35 w=57 h=13 area=494 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (54861) mov:    caja x=50 y=37 w=22 h=14 area=187 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (54869) mov:    caja x=35 y=38 w=9 h=12 area=88 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (54968) mov: [fase 2] cuadro 323: 6 mancha(s), desfase 2, 50278 us[0m
+[0;32mI (54968) mov:    caja x=107 y=0 w=53 h=30 area=741 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (54971) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (54978) mov:    caja x=71 y=27 w=4 h=4 area=15 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (54986) mov:    caja x=89 y=35 w=57 h=13 area=493 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (54994) mov:    caja x=50 y=37 w=22 h=14 area=187 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (55002) mov:    caja x=35 y=38 w=10 h=12 area=89 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (55101) mov: [fase 2] cuadro 324: 6 mancha(s), desfase 2, 50307 us[0m
+[0;32mI (55101) mov:    caja x=107 y=0 w=53 h=30 area=753 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55104) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55111) mov:    caja x=71 y=26 w=4 h=5 area=18 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (55119) mov:    caja x=89 y=35 w=57 h=13 area=497 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (55127) mov:    caja x=50 y=37 w=22 h=14 area=186 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (55135) mov:    caja x=35 y=38 w=10 h=12 area=91 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (55234) mov: [fase 2] cuadro 325: 6 mancha(s), desfase 2, 50277 us[0m
+[0;32mI (55234) mov:    caja x=107 y=0 w=53 h=30 area=737 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55237) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55245) mov:    caja x=71 y=26 w=4 h=5 area=18 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (55252) mov:    caja x=89 y=35 w=57 h=13 area=493 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (55260) mov:    caja x=50 y=37 w=22 h=14 area=188 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (55268) mov:    caja x=35 y=38 w=10 h=12 area=94 | contacto con el suelo (79.5, 99.5)[0m
+[0;32mI (55367) mov: [fase 2] cuadro 326: 6 mancha(s), desfase 2, 50301 us[0m
+[0;32mI (55367) mov:    caja x=107 y=0 w=53 h=30 area=734 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55370) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55378) mov:    caja x=71 y=26 w=3 h=5 area=15 | contacto con el suelo (144.5, 61.5)[0m
+[0;32mI (55385) mov:    caja x=89 y=35 w=57 h=13 area=494 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (55393) mov:    caja x=50 y=37 w=22 h=14 area=187 | contacto con el suelo (132.5, 101.5)[0m
+[0;32mI (55401) mov:    caja x=35 y=38 w=10 h=12 area=89 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (55500) mov: [fase 2] cuadro 327: 5 mancha(s), desfase 2, 50254 us[0m
+[0;32mI (55501) mov:    caja x=107 y=0 w=53 h=30 area=707 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55503) mov:    caja x=35 y=38 w=10 h=12 area=88 | contacto con el suelo (79.5, 99.5)[0m
+[0;32mI (55511) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55519) mov:    caja x=89 y=35 w=57 h=13 area=497 | contacto con el suelo (226.5, 95.5)[0m
+[0;32mI (55527) mov:    caja x=50 y=37 w=21 h=13 area=180 | contacto con el suelo (123.5, 99.5)[0m
+[0;32mI (55634) mov: [fase 2] cuadro 328: 6 mancha(s), desfase 3, 50266 us[0m
+[0;32mI (55634) mov:    caja x=107 y=0 w=53 h=30 area=718 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55637) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55645) mov:    caja x=71 y=27 w=4 h=4 area=15 | contacto con el suelo (145.5, 61.5)[0m
+[0;32mI (55652) mov:    caja x=90 y=35 w=55 h=13 area=465 | contacto con el suelo (233.5, 95.5)[0m
+[0;32mI (55660) mov:    caja x=50 y=37 w=21 h=13 area=180 | contacto con el suelo (123.5, 99.5)[0m
+[0;32mI (55668) mov:    caja x=35 y=38 w=10 h=12 area=91 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (55767) mov: [fase 2] cuadro 329: 5 mancha(s), desfase 3, 50253 us[0m
+[0;32mI (55768) mov:    caja x=107 y=0 w=53 h=30 area=755 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (55770) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55778) mov:    caja x=90 y=35 w=56 h=13 area=463 | contacto con el suelo (233.5, 95.5)[0m
+[0;32mI (55786) mov:    caja x=50 y=37 w=21 h=13 area=178 | contacto con el suelo (123.5, 99.5)[0m
+[0;32mI (55794) mov:    caja x=35 y=38 w=10 h=12 area=84 | contacto con el suelo (77.5, 99.5)[0m
+[0;32mI (55901) mov: [fase 2] cuadro 330: 5 mancha(s), desfase 3, 50249 us[0m
+[0;32mI (55901) mov:    caja x=108 y=0 w=52 h=30 area=723 | contacto con el suelo (267.5, 59.5)[0m
+[0;32mI (55904) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (55912) mov:    caja x=90 y=35 w=56 h=13 area=466 | contacto con el suelo (233.5, 95.5)[0m
+[0;32mI (55919) mov:    caja x=50 y=37 w=21 h=13 area=180 | contacto con el suelo (123.5, 99.5)[0m
+[0;32mI (55927) mov:    caja x=35 y=38 w=9 h=12 area=75 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (56034) mov: [fase 2] cuadro 331: 5 mancha(s), desfase 3, 50221 us[0m
+[0;32mI (56035) mov:    caja x=108 y=0 w=52 h=30 area=707 | contacto con el suelo (267.5, 59.5)[0m
+[0;32mI (56037) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56045) mov:    caja x=90 y=35 w=56 h=13 area=470 | contacto con el suelo (234.5, 95.5)[0m
+[0;32mI (56053) mov:    caja x=50 y=37 w=21 h=13 area=179 | contacto con el suelo (123.5, 99.5)[0m
+[0;32mI (56061) mov:    caja x=35 y=38 w=9 h=12 area=78 | contacto con el suelo (78.5, 99.5)[0m
+[0;32mI (56168) mov: [fase 2] cuadro 332: 5 mancha(s), desfase 4, 50234 us[0m
+[0;32mI (56168) mov:    caja x=107 y=0 w=53 h=30 area=734 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (56171) mov:    caja x=50 y=22 w=6 h=6 area=26 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56179) mov:    caja x=90 y=35 w=55 h=13 area=436 | contacto con el suelo (237.5, 95.5)[0m
+[0;32mI (56186) mov:    caja x=50 y=37 w=20 h=12 area=163 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56194) mov:    caja x=35 y=38 w=9 h=11 area=70 | contacto con el suelo (78.5, 97.5)[0m
+[0;32mI (56301) mov: [fase 2] cuadro 333: 5 mancha(s), desfase 4, 50216 us[0m
+[0;32mI (56302) mov:    caja x=107 y=0 w=53 h=30 area=726 | contacto con el suelo (266.5, 59.5)[0m
+[0;32mI (56304) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56312) mov:    caja x=90 y=35 w=56 h=13 area=443 | contacto con el suelo (234.5, 95.5)[0m
+[0;32mI (56320) mov:    caja x=50 y=37 w=20 h=12 area=171 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56328) mov:    caja x=35 y=38 w=9 h=10 area=70 | contacto con el suelo (79.5, 95.5)[0m
+[0;32mI (56435) mov: [fase 2] cuadro 334: 5 mancha(s), desfase 4, 50247 us[0m
+[0;32mI (56435) mov:    caja x=108 y=0 w=52 h=30 area=733 | contacto con el suelo (269.5, 59.5)[0m
+[0;32mI (56438) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56446) mov:    caja x=90 y=35 w=56 h=13 area=449 | contacto con el suelo (234.5, 95.5)[0m
+[0;32mI (56454) mov:    caja x=50 y=37 w=20 h=12 area=165 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56461) mov:    caja x=35 y=38 w=9 h=12 area=78 | contacto con el suelo (77.5, 99.5)[0m
+[0;32mI (56568) mov: [fase 2] cuadro 335: 5 mancha(s), desfase 3, 50214 us[0m
+[0;32mI (56568) mov:    caja x=108 y=0 w=52 h=29 area=699 | contacto con el suelo (267.5, 57.5)[0m
+[0;32mI (56571) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56579) mov:    caja x=90 y=35 w=56 h=13 area=464 | contacto con el suelo (234.5, 95.5)[0m
+[0;32mI (56587) mov:    caja x=50 y=37 w=20 h=12 area=167 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56595) mov:    caja x=35 y=38 w=9 h=12 area=80 | contacto con el suelo (77.5, 99.5)[0m
+[0;32mI (56701) mov: [fase 2] cuadro 336: 5 mancha(s), desfase 3, 50203 us[0m
+[0;32mI (56701) mov:    caja x=108 y=0 w=52 h=29 area=673 | contacto con el suelo (267.5, 57.5)[0m
+[0;32mI (56704) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56712) mov:    caja x=90 y=35 w=56 h=13 area=443 | contacto con el suelo (235.5, 95.5)[0m
+[0;32mI (56720) mov:    caja x=50 y=37 w=20 h=12 area=167 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56728) mov:    caja x=35 y=38 w=10 h=10 area=70 | contacto con el suelo (80.5, 95.5)[0m
+[0;32mI (56834) mov: [fase 2] cuadro 337: 5 mancha(s), desfase 3, 50196 us[0m
+[0;32mI (56834) mov:    caja x=108 y=0 w=52 h=29 area=688 | contacto con el suelo (267.5, 57.5)[0m
+[0;32mI (56837) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56845) mov:    caja x=90 y=35 w=56 h=13 area=450 | contacto con el suelo (235.5, 95.5)[0m
+[0;32mI (56853) mov:    caja x=50 y=37 w=20 h=12 area=168 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (56861) mov:    caja x=35 y=38 w=9 h=10 area=74 | contacto con el suelo (79.5, 95.5)[0m
+[0;32mI (56968) mov: [fase 2] cuadro 338: 5 mancha(s), desfase 3, 50224 us[0m
+[0;32mI (56968) mov:    caja x=108 y=0 w=52 h=29 area=678 | contacto con el suelo (267.5, 57.5)[0m
+[0;32mI (56971) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (56978) mov:    caja x=90 y=35 w=56 h=12 area=448 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (56986) mov:    caja x=35 y=37 w=9 h=12 area=79 | contacto con el suelo (77.5, 97.5)[0m
+[0;32mI (56994) mov:    caja x=50 y=37 w=20 h=12 area=167 | contacto con el suelo (122.5, 97.5)[0m
+[0;32mI (57101) mov: [fase 2] cuadro 339: 5 mancha(s), desfase 4, 50176 us[0m
+[0;32mI (57101) mov:    caja x=108 y=0 w=48 h=29 area=654 | contacto con el suelo (258.5, 57.5)[0m
+[0;32mI (57104) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (57112) mov:    caja x=90 y=35 w=56 h=12 area=446 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57120) mov:    caja x=35 y=37 w=9 h=11 area=77 | contacto con el suelo (79.5, 95.5)[0m
+[0;32mI (57127) mov:    caja x=50 y=37 w=20 h=12 area=166 | contacto con el suelo (122.5, 97.5)[0m
+[0;32mI (57235) mov: [fase 2] cuadro 340: 5 mancha(s), desfase 4, 50186 us[0m
+[0;32mI (57235) mov:    caja x=109 y=0 w=47 h=29 area=653 | contacto con el suelo (259.5, 57.5)[0m
+[0;32mI (57238) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (57245) mov:    caja x=90 y=35 w=56 h=12 area=436 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57253) mov:    caja x=35 y=37 w=9 h=11 area=77 | contacto con el suelo (79.5, 95.5)[0m
+[0;32mI (57261) mov:    caja x=50 y=37 w=20 h=12 area=162 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (57368) mov: [fase 2] cuadro 341: 5 mancha(s), desfase 4, 50164 us[0m
+[0;32mI (57369) mov:    caja x=109 y=0 w=47 h=28 area=642 | contacto con el suelo (264.5, 55.5)[0m
+[0;32mI (57371) mov:    caja x=50 y=22 w=6 h=5 area=23 | contacto con el suelo (105.5, 53.5)[0m
+[0;32mI (57379) mov:    caja x=90 y=35 w=57 h=12 area=442 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57387) mov:    caja x=35 y=37 w=9 h=11 area=76 | contacto con el suelo (79.5, 95.5)[0m
+[0;32mI (57395) mov:    caja x=50 y=37 w=20 h=12 area=164 | contacto con el suelo (121.5, 97.5)[0m
+[0;32mI (57502) mov: [fase 2] cuadro 342: 5 mancha(s), desfase 5, 50145 us[0m
+[0;32mI (57502) mov:    caja x=109 y=0 w=47 h=29 area=640 | contacto con el suelo (258.5, 57.5)[0m
+[0;32mI (57505) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (57513) mov:    caja x=90 y=35 w=55 h=12 area=401 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57520) mov:    caja x=35 y=37 w=8 h=11 area=68 | contacto con el suelo (77.5, 95.5)[0m
+[0;32mI (57528) mov:    caja x=50 y=37 w=20 h=11 area=155 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (57635) mov: [fase 2] cuadro 343: 5 mancha(s), desfase 5, 50093 us[0m
+[0;32mI (57636) mov:    caja x=109 y=0 w=47 h=28 area=615 | contacto con el suelo (264.5, 55.5)[0m
+[0;32mI (57638) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (107.5, 55.5)[0m
+[0;32mI (57646) mov:    caja x=90 y=35 w=49 h=12 area=377 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57654) mov:    caja x=35 y=37 w=7 h=11 area=61 | contacto con el suelo (77.5, 95.5)[0m
+[0;32mI (57662) mov:    caja x=50 y=37 w=20 h=11 area=146 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (57769) mov: [fase 2] cuadro 344: 5 mancha(s), desfase 5, 50119 us[0m
+[0;32mI (57769) mov:    caja x=109 y=0 w=44 h=28 area=604 | contacto con el suelo (255.5, 55.5)[0m
+[0;32mI (57772) mov:    caja x=50 y=22 w=6 h=6 area=32 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (57780) mov:    caja x=90 y=35 w=49 h=12 area=384 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57788) mov:    caja x=35 y=37 w=7 h=11 area=59 | contacto con el suelo (76.5, 95.5)[0m
+[0;32mI (57795) mov:    caja x=50 y=37 w=20 h=11 area=146 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (57902) mov: [fase 2] cuadro 345: 5 mancha(s), desfase 5, 50102 us[0m
+[0;32mI (57903) mov:    caja x=109 y=0 w=44 h=28 area=611 | contacto con el suelo (256.5, 55.5)[0m
+[0;32mI (57905) mov:    caja x=50 y=22 w=6 h=5 area=23 | contacto con el suelo (105.5, 53.5)[0m
+[0;32mI (57913) mov:    caja x=90 y=35 w=49 h=12 area=380 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (57921) mov:    caja x=35 y=37 w=7 h=11 area=62 | contacto con el suelo (77.5, 95.5)[0m
+[0;32mI (57929) mov:    caja x=50 y=37 w=20 h=11 area=147 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58036) mov: [fase 2] cuadro 346: 5 mancha(s), desfase 5, 50122 us[0m
+[0;32mI (58036) mov:    caja x=109 y=0 w=44 h=28 area=599 | contacto con el suelo (256.5, 55.5)[0m
+[0;32mI (58039) mov:    caja x=50 y=22 w=6 h=4 area=19 | contacto con el suelo (105.5, 51.5)[0m
+[0;32mI (58047) mov:    caja x=90 y=35 w=49 h=12 area=382 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (58055) mov:    caja x=35 y=37 w=8 h=10 area=62 | contacto con el suelo (77.5, 93.5)[0m
+[0;32mI (58062) mov:    caja x=50 y=37 w=20 h=11 area=147 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58169) mov: [fase 2] cuadro 347: 5 mancha(s), desfase 5, 50104 us[0m
+[0;32mI (58170) mov:    caja x=109 y=0 w=44 h=28 area=605 | contacto con el suelo (243.5, 55.5)[0m
+[0;32mI (58173) mov:    caja x=50 y=22 w=6 h=5 area=23 | contacto con el suelo (105.5, 53.5)[0m
+[0;32mI (58180) mov:    caja x=90 y=35 w=49 h=12 area=382 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (58188) mov:    caja x=50 y=36 w=20 h=12 area=152 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58196) mov:    caja x=35 y=37 w=8 h=10 area=63 | contacto con el suelo (77.5, 93.5)[0m
+[0;32mI (58303) mov: [fase 2] cuadro 348: 5 mancha(s), desfase 5, 50113 us[0m
+[0;32mI (58303) mov:    caja x=109 y=0 w=44 h=28 area=600 | contacto con el suelo (243.5, 55.5)[0m
+[0;32mI (58306) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58314) mov:    caja x=90 y=35 w=49 h=12 area=371 | contacto con el suelo (217.5, 93.5)[0m
+[0;32mI (58322) mov:    caja x=50 y=36 w=20 h=12 area=151 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58330) mov:    caja x=35 y=37 w=8 h=10 area=63 | contacto con el suelo (77.5, 93.5)[0m
+[0;32mI (58436) mov: [fase 2] cuadro 349: 5 mancha(s), desfase 5, 50052 us[0m
+[0;32mI (58437) mov:    caja x=109 y=0 w=44 h=28 area=569 | contacto con el suelo (243.5, 55.5)[0m
+[0;32mI (58440) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58447) mov:    caja x=90 y=35 w=49 h=11 area=360 | contacto con el suelo (217.5, 91.5)[0m
+[0;32mI (58455) mov:    caja x=50 y=36 w=20 h=12 area=153 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58463) mov:    caja x=35 y=37 w=7 h=11 area=58 | contacto con el suelo (77.5, 95.5)[0m
+[0;32mI (58570) mov: [fase 2] cuadro 350: 5 mancha(s), desfase 5, 50077 us[0m
+[0;32mI (58570) mov:    caja x=109 y=0 w=44 h=28 area=575 | contacto con el suelo (243.5, 55.5)[0m
+[0;32mI (58573) mov:    caja x=50 y=22 w=6 h=6 area=27 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58581) mov:    caja x=90 y=35 w=49 h=11 area=363 | contacto con el suelo (216.5, 91.5)[0m
+[0;32mI (58589) mov:    caja x=50 y=36 w=20 h=12 area=146 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58597) mov:    caja x=35 y=37 w=7 h=10 area=58 | contacto con el suelo (77.5, 93.5)[0m
+[0;32mI (58703) mov: [fase 2] cuadro 351: 5 mancha(s), desfase 5, 50040 us[0m
+[0;32mI (58704) mov:    caja x=109 y=0 w=46 h=27 area=560 | contacto con el suelo (263.5, 53.5)[0m
+[0;32mI (58707) mov:    caja x=50 y=22 w=6 h=6 area=31 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58714) mov:    caja x=90 y=35 w=44 h=11 area=345 | contacto con el suelo (217.5, 91.5)[0m
+[0;32mI (58722) mov:    caja x=50 y=36 w=20 h=12 area=151 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58730) mov:    caja x=35 y=37 w=8 h=10 area=57 | contacto con el suelo (76.5, 93.5)[0m
+[0;32mI (58837) mov: [fase 2] cuadro 352: 5 mancha(s), desfase 5, 50054 us[0m
+[0;32mI (58837) mov:    caja x=109 y=0 w=44 h=27 area=564 | contacto con el suelo (261.5, 53.5)[0m
+[0;32mI (58840) mov:    caja x=50 y=22 w=6 h=6 area=29 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58848) mov:    caja x=90 y=35 w=44 h=11 area=338 | contacto con el suelo (216.5, 91.5)[0m
+[0;32mI (58856) mov:    caja x=50 y=36 w=20 h=12 area=146 | contacto con el suelo (121.5, 95.5)[0m
+[0;32mI (58864) mov:    caja x=35 y=37 w=6 h=9 area=47 | contacto con el suelo (75.5, 91.5)[0m
+[0;32mI (58971) mov: [fase 2] cuadro 353: 5 mancha(s), desfase 5, 50011 us[0m
+[0;32mI (58971) mov:    caja x=109 y=0 w=41 h=28 area=515 | contacto con el suelo (240.5, 55.5)[0m
+[0;32mI (58974) mov:    caja x=50 y=22 w=6 h=6 area=29 | contacto con el suelo (105.5, 55.5)[0m
+[0;32mI (58981) mov:    caja x=90 y=35 w=45 h=11 area=351 | contacto con el suelo (216.5, 91.5)[0m
+[0;32mI (58989) mov:    caja x=50 y=36 w=20 h=12 area=135 | contacto con el suelo (130.5, 95.5)[0m
+[0;32mI (58997) mov:    caja x=35 y=37 w=8 h=9 area=55 | contacto con el suelo (76.5, 91.5)[0m
+[0;32mI (59104) mov: [fase 2] cuadro 354: 5 mancha(s), desfase 5, 50025 us[0m
+[0;32mI (59104) mov:    caja x=109 y=0 w=44 h=27 area=513 | contacto con el suelo (261.5, 53.5)[0m
+[0;32mI (59107) mov:    caja x=50 y=23 w=4 h=5 area=16 | contacto con el suelo (103.5, 55.5)[0m
+[0;32mI (59114) mov:    caja x=90 y=34 w=44 h=12 area=349 | contacto con el suelo (216.5, 91.5)[0m
+[0;32mI (59122) mov:    caja x=50 y=36 w=20 h=12 area=135 | contacto con el suelo (130.5, 95.5)[0m
+[0;32mI (59130) mov:    caja x=35 y=37 w=7 h=9 area=53 | contacto con el suelo (76.5, 91.5)[0m
+[0;32mI (59237) mov: [fase 2] cuadro 355: 5 mancha(s), desfase 4, 49993 us[0m
+[0;32mI (59237) mov:    caja x=111 y=0 w=37 h=27 area=449 | contacto con el suelo (240.5, 53.5)[0m
+[0;32mI (59240) mov:    caja x=50 y=22 w=4 h=6 area=21 | contacto con el suelo (103.5, 55.5)[0m
+[0;32mI (59248) mov:    caja x=90 y=34 w=44 h=12 area=373 | contacto con el suelo (216.5, 91.5)[0m
+[0;32mI (59256) mov:    caja x=50 y=36 w=20 h=12 area=144 | contacto con el suelo (130.5, 95.5)[0m
+[0;32mI (59263) mov:    caja x=35 y=37 w=9 h=10 area=64 | contacto con el suelo (77.5, 93.5)[0m
+[0;32mI (59371) mov: [fase 2] cuadro 356: 5 mancha(s), desfase 5, 49983 us[0m
+[0;32mI (59371) mov:    caja x=111 y=0 w=38 h=26 area=459 | contacto con el suelo (249.5, 51.5)[0m
+[0;32mI (59374) mov:    caja x=50 y=22 w=4 h=6 area=21 | contacto con el suelo (103.5, 55.5)[0m
+[0;32mI (59381) mov:    caja x=90 y=35 w=45 h=11 area=322 | contacto con el suelo (210.5, 91.5)[0m
+[0;32mI (59389) mov:    caja x=50 y=36 w=20 h=12 area=137 | contacto con el suelo (130.5, 95.5)[0m
+[0;32mI (59397) mov:    caja x=35 y=37 w=7 h=9 area=52 | contacto con el suelo (76.5, 91.5)[0m
+[0;32mI (59504) mov: [fase 2] cuadro 357: 4 mancha(s), desfase 5, 49945 us[0m
+[0;32mI (59504) mov:    caja x=111 y=0 w=39 h=26 area=445 | contacto con el suelo (266.5, 51.5)[0m
+[0;32mI (59507) mov:    caja x=90 y=34 w=44 h=12 area=320 | contacto con el suelo (210.5, 91.5)[0m
+[0;32mI (59515) mov:    caja x=50 y=36 w=20 h=12 area=136 | contacto con el suelo (130.5, 95.5)[0m
+[0;32mI (59523) mov:    caja x=35 y=37 w=8 h=9 area=54 | contacto con el suelo (76.5, 91.5)[0m
+[0;32mI (59638) mov: [fase 2] cuadro 358: 4 mancha(s), desfase 5, 49966 us[0m
+[0;32mI (59638) mov:    caja x=111 y=0 w=38 h=26 area=442 | contacto con el suelo (242.5, 51.5)[0m
+[0;32mI (59641) mov:    caja x=90 y=34 w=44 h=12 area=310 | contacto con el suelo (210.5, 91.5)[0m
+[0;32mI (59649) mov:    caja x=50 y=36 w=19 h=11 area=129 | contacto con el suelo (121.5, 93.5)[0m
+[0;32mI (59657) mov:    caja x=35 y=37 w=8 h=9 area=55 | contacto con el suelo (76.5, 91.5)[0m
+[0;32mI (59771) mov: [fase 2] cuadro 359: 4 mancha(s), desfase 5, 49874 us[0m
+[0;32mI (59771) mov:    caja x=112 y=0 w=37 h=23 area=341 | contacto con el suelo (254.5, 45.5)[0m
+[0;32mI (59774) mov:    caja x=90 y=34 w=44 h=12 area=293 | contacto con el suelo (209.5, 91.5)[0m
+[0;32mI (59782) mov:    caja x=50 y=35 w=19 h=12 area=138 | contacto con el suelo (119.5, 93.5)[0m
+[0;32mI (59790) mov:    caja x=35 y=37 w=7 h=9 area=50 | contacto con el suelo (75.5, 91.5)[0m
+[0;32mI (59905) mov: [fase 2] cuadro 360: 5 mancha(s), desfase 5, 49884 us[0m
+[0;32mI (59905) mov:    caja x=113 y=0 w=35 h=23 area=293 | contacto con el suelo (264.5, 45.5)[0m
+[0;32mI (59908) mov:    caja x=48 y=6 w=10 h=7 area=41 | contacto con el suelo (109.5, 25.5)[0m
+[0;32mI (59915) mov:    caja x=90 y=34 w=45 h=12 area=298 | contacto con el suelo (209.5, 91.5)[0m
+[0;32mI (59923) mov:    caja x=50 y=36 w=19 h=11 area=128 | contacto con el suelo (122.5, 93.5)[0m
+[0;32mI (59931) mov:    caja x=35 y=37 w=7 h=9 area=48 | contacto con el suelo (75.5, 91.5)[0m
+[0;32mI (60038) mov: [fase 2] cuadro 361: 5 mancha(s), desfase 5, 49898 us[0m
+[0;32mI (60039) mov:    caja x=113 y=0 w=35 h=22 area=283 | contacto con el suelo (249.5, 43.5)[0m
+[0;32mI (60041) mov:    caja x=47 y=4 w=18 h=9 area=115 | contacto con el suelo (115.5, 25.5)[0m
+[0;32mI (60049) mov:    caja x=90 y=34 w=44 h=12 area=302 | contacto con el suelo (209.5, 91.5)[0m
+[0;32mI (60057) mov:    caja x=50 y=36 w=19 h=11 area=130 | contacto con el suelo (121.5, 93.5)[0m
+[0;32mI (60065) mov:    caja x=35 y=37 w=7 h=8 area=44 | contacto con el suelo (75.5, 89.5)[0m
+[0;32mI (60172) mov: [fase 2] cuadro 362: 5 mancha(s), desfase 5, 49956 us[0m
+[0;32mI (60172) mov:    caja x=49 y=0 w=21 h=13 area=164 | contacto con el suelo (112.5, 25.5)[0m
+[0;32mI (60175) mov:    caja x=113 y=0 w=36 h=22 area=299 | contacto con el suelo (248.5, 43.5)[0m
+[0;32mI (60183) mov:    caja x=90 y=34 w=43 h=11 area=297 | contacto con el suelo (210.5, 89.5)[0m
+[0;32mI (60191) mov:    caja x=50 y=36 w=19 h=11 area=126 | contacto con el suelo (124.5, 93.5)[0m
+[0;32mI (60199) mov:    caja x=35 y=37 w=7 h=8 area=42 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (60305) mov: [fase 2] cuadro 363: 5 mancha(s), desfase 5, 49866 us[0m
+[0;32mI (60306) mov:    caja x=55 y=0 w=18 h=12 area=146 | contacto con el suelo (120.5, 23.5)[0m
+[0;32mI (60308) mov:    caja x=118 y=0 w=31 h=22 area=238 | contacto con el suelo (253.5, 43.5)[0m
+[0;32mI (60316) mov:    caja x=90 y=34 w=45 h=11 area=270 | contacto con el suelo (205.5, 89.5)[0m
+[0;32mI (60324) mov:    caja x=50 y=36 w=19 h=11 area=129 | contacto con el suelo (121.5, 93.5)[0m
+[0;32mI (60332) mov:    caja x=35 y=37 w=7 h=8 area=43 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (60439) mov: [fase 2] cuadro 364: 5 mancha(s), desfase 5, 49841 us[0m
+[0;32mI (60439) mov:    caja x=59 y=0 w=13 h=12 area=81 | contacto con el suelo (123.5, 23.5)[0m
+[0;32mI (60442) mov:    caja x=120 y=0 w=29 h=21 area=222 | contacto con el suelo (265.5, 41.5)[0m
+[0;32mI (60450) mov:    caja x=90 y=34 w=45 h=11 area=271 | contacto con el suelo (205.5, 89.5)[0m
+[0;32mI (60458) mov:    caja x=50 y=36 w=19 h=11 area=126 | contacto con el suelo (124.5, 93.5)[0m
+[0;32mI (60466) mov:    caja x=35 y=37 w=7 h=8 area=42 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (60572) mov: [fase 2] cuadro 365: 7 mancha(s), desfase 5, 49771 us[0m
+[0;32mI (60573) mov:    caja x=69 y=0 w=5 h=3 area=14 | contacto con el suelo (142.5, 5.5)[0m
+[0;32mI (60575) mov:    caja x=141 y=0 w=7 h=2 area=14 | contacto con el suelo (288.5, 3.5)[0m
+[0;32mI (60583) mov:    caja x=121 y=3 w=20 h=17 area=190 | contacto con el suelo (261.5, 39.5)[0m
+[0;32mI (60590) mov:    caja x=49 y=7 w=15 h=5 area=50 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (60598) mov:    caja x=90 y=34 w=42 h=10 area=238 | contacto con el suelo (221.5, 87.5)[0m
+[0;32mI (60606) mov:    caja x=51 y=35 w=18 h=12 area=117 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (60614) mov:    caja x=35 y=37 w=5 h=8 area=34 | contacto con el suelo (75.5, 89.5)[0m
+[0;32mI (60706) mov: [fase 2] cuadro 366: 5 mancha(s), desfase 5, 49800 us[0m
+[0;32mI (60706) mov:    caja x=120 y=3 w=21 h=17 area=160 | contacto con el suelo (266.5, 39.5)[0m
+[0;32mI (60709) mov:    caja x=49 y=6 w=15 h=6 area=70 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (60717) mov:    caja x=90 y=34 w=42 h=11 area=250 | contacto con el suelo (205.5, 89.5)[0m
+[0;32mI (60725) mov:    caja x=50 y=35 w=19 h=12 area=120 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (60732) mov:    caja x=35 y=37 w=6 h=8 area=36 | contacto con el suelo (75.5, 89.5)[0m
+[0;32mI (60839) mov: [fase 2] cuadro 367: 7 mancha(s), desfase 5, 49748 us[0m
+[0;32mI (60840) mov:    caja x=141 y=0 w=7 h=2 area=14 | contacto con el suelo (288.5, 3.5)[0m
+[0;32mI (60842) mov:    caja x=120 y=3 w=21 h=17 area=176 | contacto con el suelo (260.5, 39.5)[0m
+[0;32mI (60850) mov:    caja x=58 y=7 w=6 h=5 area=30 | contacto con el suelo (121.5, 23.5)[0m
+[0;32mI (60858) mov:    caja x=49 y=8 w=4 h=4 area=14 | contacto con el suelo (101.5, 23.5)[0m
+[0;32mI (60865) mov:    caja x=90 y=34 w=42 h=10 area=242 | contacto con el suelo (221.5, 87.5)[0m
+[0;32mI (60873) mov:    caja x=51 y=36 w=18 h=11 area=111 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (60881) mov:    caja x=35 y=37 w=5 h=8 area=33 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (60973) mov: [fase 2] cuadro 368: 6 mancha(s), desfase 5, 49780 us[0m
+[0;32mI (60973) mov:    caja x=141 y=0 w=7 h=2 area=14 | contacto con el suelo (288.5, 3.5)[0m
+[0;32mI (60976) mov:    caja x=121 y=3 w=20 h=17 area=182 | contacto con el suelo (266.5, 39.5)[0m
+[0;32mI (60984) mov:    caja x=56 y=5 w=8 h=7 area=43 | contacto con el suelo (121.5, 23.5)[0m
+[0;32mI (60991) mov:    caja x=90 y=34 w=42 h=10 area=239 | contacto con el suelo (221.5, 87.5)[0m
+[0;32mI (60999) mov:    caja x=51 y=35 w=18 h=12 area=117 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61007) mov:    caja x=35 y=37 w=5 h=8 area=35 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (61107) mov: [fase 2] cuadro 369: 6 mancha(s), desfase 5, 49773 us[0m
+[0;32mI (61107) mov:    caja x=141 y=0 w=7 h=2 area=14 | contacto con el suelo (288.5, 3.5)[0m
+[0;32mI (61109) mov:    caja x=120 y=3 w=21 h=16 area=174 | contacto con el suelo (261.5, 37.5)[0m
+[0;32mI (61117) mov:    caja x=49 y=6 w=15 h=6 area=74 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61125) mov:    caja x=90 y=34 w=42 h=10 area=234 | contacto con el suelo (221.5, 87.5)[0m
+[0;32mI (61133) mov:    caja x=51 y=35 w=18 h=12 area=114 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61141) mov:    caja x=35 y=37 w=6 h=8 area=38 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (61240) mov: [fase 2] cuadro 370: 5 mancha(s), desfase 5, 49785 us[0m
+[0;32mI (61240) mov:    caja x=120 y=4 w=21 h=16 area=160 | contacto con el suelo (266.5, 39.5)[0m
+[0;32mI (61243) mov:    caja x=49 y=5 w=15 h=7 area=78 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61251) mov:    caja x=90 y=34 w=43 h=10 area=241 | contacto con el suelo (222.5, 87.5)[0m
+[0;32mI (61259) mov:    caja x=52 y=35 w=17 h=12 area=111 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61267) mov:    caja x=35 y=37 w=5 h=8 area=34 | contacto con el suelo (74.5, 89.5)[0m
+[0;32mI (61374) mov: [fase 2] cuadro 371: 5 mancha(s), desfase 5, 49753 us[0m
+[0;32mI (61374) mov:    caja x=121 y=3 w=20 h=17 area=172 | contacto con el suelo (266.5, 39.5)[0m
+[0;32mI (61377) mov:    caja x=49 y=5 w=15 h=7 area=81 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61384) mov:    caja x=91 y=34 w=41 h=10 area=232 | contacto con el suelo (206.5, 87.5)[0m
+[0;32mI (61392) mov:    caja x=54 y=35 w=15 h=12 area=96 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61400) mov:    caja x=35 y=37 w=5 h=6 area=28 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (61507) mov: [fase 2] cuadro 372: 5 mancha(s), desfase 5, 49786 us[0m
+[0;32mI (61507) mov:    caja x=120 y=3 w=21 h=17 area=172 | contacto con el suelo (265.5, 39.5)[0m
+[0;32mI (61510) mov:    caja x=49 y=5 w=15 h=7 area=80 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61518) mov:    caja x=91 y=34 w=42 h=9 area=237 | contacto con el suelo (223.5, 85.5)[0m
+[0;32mI (61526) mov:    caja x=52 y=36 w=17 h=11 area=106 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61534) mov:    caja x=35 y=37 w=6 h=6 area=30 | contacto con el suelo (75.5, 85.5)[0m
+[0;32mI (61641) mov: [fase 2] cuadro 373: 5 mancha(s), desfase 5, 49757 us[0m
+[0;32mI (61641) mov:    caja x=121 y=3 w=20 h=17 area=178 | contacto con el suelo (265.5, 39.5)[0m
+[0;32mI (61644) mov:    caja x=49 y=5 w=15 h=7 area=81 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61651) mov:    caja x=91 y=34 w=40 h=9 area=225 | contacto con el suelo (221.5, 85.5)[0m
+[0;32mI (61659) mov:    caja x=52 y=35 w=17 h=12 area=105 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61667) mov:    caja x=35 y=37 w=5 h=6 area=28 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (61774) mov: [fase 2] cuadro 374: 5 mancha(s), desfase 5, 49745 us[0m
+[0;32mI (61775) mov:    caja x=49 y=4 w=15 h=8 area=85 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61777) mov:    caja x=121 y=4 w=19 h=15 area=127 | contacto con el suelo (261.5, 37.5)[0m
+[0;32mI (61785) mov:    caja x=91 y=34 w=40 h=9 area=224 | contacto con el suelo (221.5, 85.5)[0m
+[0;32mI (61793) mov:    caja x=52 y=35 w=17 h=12 area=96 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (61801) mov:    caja x=35 y=37 w=5 h=6 area=26 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (61908) mov: [fase 2] cuadro 375: 5 mancha(s), desfase 5, 49691 us[0m
+[0;32mI (61908) mov:    caja x=49 y=4 w=15 h=8 area=70 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (61911) mov:    caja x=119 y=4 w=22 h=15 area=112 | contacto con el suelo (260.5, 37.5)[0m
+[0;32mI (61919) mov:    caja x=35 y=37 w=6 h=6 area=29 | contacto con el suelo (75.5, 85.5)[0m
+[0;32mI (61926) mov:    caja x=99 y=34 w=33 h=9 area=202 | contacto con el suelo (230.5, 85.5)[0m
+[0;32mI (61934) mov:    caja x=52 y=35 w=17 h=12 area=93 | contacto con el suelo (130.5, 93.5)[0m
+[0;32mI (62041) mov: [fase 2] cuadro 376: 5 mancha(s), desfase 5, 49714 us[0m
+[0;32mI (62042) mov:    caja x=49 y=4 w=15 h=8 area=85 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62044) mov:    caja x=121 y=4 w=20 h=15 area=108 | contacto con el suelo (260.5, 37.5)[0m
+[0;32mI (62052) mov:    caja x=35 y=37 w=5 h=6 area=26 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (62060) mov:    caja x=99 y=34 w=32 h=9 area=201 | contacto con el suelo (229.5, 85.5)[0m
+[0;32mI (62068) mov:    caja x=52 y=35 w=17 h=12 area=94 | contacto con el suelo (129.5, 93.5)[0m
+[0;32mI (62175) mov: [fase 2] cuadro 377: 6 mancha(s), desfase 5, 49671 us[0m
+[0;32mI (62175) mov:    caja x=119 y=3 w=21 h=16 area=132 | contacto con el suelo (260.5, 37.5)[0m
+[0;32mI (62178) mov:    caja x=49 y=4 w=15 h=8 area=79 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62186) mov:    caja x=99 y=34 w=24 h=9 area=157 | contacto con el suelo (216.5, 85.5)[0m
+[0;32mI (62193) mov:    caja x=52 y=35 w=17 h=12 area=77 | contacto con el suelo (130.5, 93.5)[0m
+[0;32mI (62201) mov:    caja x=128 y=36 w=4 h=5 area=19 | contacto con el suelo (259.5, 81.5)[0m
+[0;32mI (62209) mov:    caja x=35 y=37 w=4 h=6 area=22 | contacto con el suelo (73.5, 85.5)[0m
+[0;32mI (62309) mov: [fase 2] cuadro 378: 5 mancha(s), desfase 5, 49725 us[0m
+[0;32mI (62309) mov:    caja x=120 y=3 w=21 h=16 area=131 | contacto con el suelo (259.5, 37.5)[0m
+[0;32mI (62312) mov:    caja x=49 y=4 w=15 h=8 area=89 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62319) mov:    caja x=99 y=34 w=33 h=9 area=195 | contacto con el suelo (230.5, 85.5)[0m
+[0;32mI (62327) mov:    caja x=52 y=35 w=17 h=12 area=83 | contacto con el suelo (130.5, 93.5)[0m
+[0;32mI (62335) mov:    caja x=35 y=37 w=6 h=6 area=30 | contacto con el suelo (75.5, 85.5)[0m
+[0;32mI (62442) mov: [fase 2] cuadro 379: 6 mancha(s), desfase 5, 49676 us[0m
+[0;32mI (62442) mov:    caja x=131 y=3 w=10 h=6 area=44 | contacto con el suelo (271.5, 17.5)[0m
+[0;32mI (62445) mov:    caja x=49 y=4 w=15 h=8 area=91 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62453) mov:    caja x=119 y=10 w=16 h=8 area=55 | contacto con el suelo (264.5, 35.5)[0m
+[0;32mI (62460) mov:    caja x=99 y=34 w=32 h=9 area=182 | contacto con el suelo (229.5, 85.5)[0m
+[0;32mI (62468) mov:    caja x=54 y=35 w=15 h=12 area=79 | contacto con el suelo (130.5, 93.5)[0m
+[0;32mI (62476) mov:    caja x=35 y=37 w=5 h=6 area=25 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (62576) mov: [fase 2] cuadro 380: 6 mancha(s), desfase 5, 49683 us[0m
+[0;32mI (62576) mov:    caja x=49 y=4 w=15 h=8 area=91 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62579) mov:    caja x=131 y=4 w=10 h=5 area=41 | contacto con el suelo (271.5, 17.5)[0m
+[0;32mI (62586) mov:    caja x=119 y=10 w=16 h=8 area=46 | contacto con el suelo (264.5, 35.5)[0m
+[0;32mI (62594) mov:    caja x=99 y=34 w=32 h=9 area=188 | contacto con el suelo (229.5, 85.5)[0m
+[0;32mI (62602) mov:    caja x=55 y=35 w=14 h=12 area=59 | contacto con el suelo (132.5, 93.5)[0m
+[0;32mI (62610) mov:    caja x=35 y=37 w=5 h=6 area=27 | contacto con el suelo (74.5, 85.5)[0m
+[0;32mI (62709) mov: [fase 2] cuadro 381: 5 mancha(s), desfase 6, 49634 us[0m
+[0;32mI (62709) mov:    caja x=49 y=4 w=15 h=8 area=92 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62712) mov:    caja x=119 y=4 w=20 h=14 area=87 | contacto con el suelo (264.5, 35.5)[0m
+[0;32mI (62720) mov:    caja x=35 y=37 w=4 h=5 area=19 | contacto con el suelo (73.5, 83.5)[0m
+[0;32mI (62727) mov:    caja x=100 y=34 w=29 h=9 area=163 | contacto con el suelo (216.5, 85.5)[0m
+[0;32mI (62735) mov:    caja x=56 y=35 w=12 h=10 area=49 | contacto con el suelo (129.5, 89.5)[0m
+[0;32mI (62843) mov: [fase 2] cuadro 382: 6 mancha(s), desfase 6, 49659 us[0m
+[0;32mI (62843) mov:    caja x=49 y=4 w=15 h=8 area=98 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (62846) mov:    caja x=131 y=4 w=9 h=5 area=34 | contacto con el suelo (270.5, 17.5)[0m
+[0;32mI (62853) mov:    caja x=121 y=10 w=14 h=8 area=40 | contacto con el suelo (264.5, 35.5)[0m
+[0;32mI (62861) mov:    caja x=100 y=34 w=28 h=9 area=160 | contacto con el suelo (216.5, 85.5)[0m
+[0;32mI (62869) mov:    caja x=56 y=35 w=13 h=12 area=60 | contacto con el suelo (132.5, 93.5)[0m
+[0;32mI (62877) mov:    caja x=35 y=37 w=4 h=5 area=18 | contacto con el suelo (73.5, 83.5)[0m
+[0;32mI (62976) mov: [fase 2] cuadro 383: 5 mancha(s), desfase 6, 49620 us[0m
+[0;32mI (62977) mov:    caja x=48 y=4 w=16 h=8 area=101 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (62979) mov:    caja x=119 y=4 w=19 h=14 area=83 | contacto con el suelo (259.5, 35.5)[0m
+[0;32mI (62987) mov:    caja x=35 y=37 w=4 h=5 area=18 | contacto con el suelo (73.5, 83.5)[0m
+[0;32mI (62995) mov:    caja x=100 y=34 w=22 h=9 area=134 | contacto con el suelo (215.5, 85.5)[0m
+[0;32mI (63003) mov:    caja x=56 y=35 w=13 h=12 area=60 | contacto con el suelo (132.5, 93.5)[0m
+[0;32mI (63110) mov: [fase 2] cuadro 384: 6 mancha(s), desfase 6, 49611 us[0m
+[0;32mI (63110) mov:    caja x=48 y=4 w=16 h=8 area=103 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63113) mov:    caja x=131 y=4 w=6 h=4 area=21 | contacto con el suelo (267.5, 15.5)[0m
+[0;32mI (63121) mov:    caja x=130 y=14 w=4 h=4 area=15 | contacto con el suelo (263.5, 35.5)[0m
+[0;32mI (63128) mov:    caja x=100 y=34 w=23 h=9 area=135 | contacto con el suelo (215.5, 85.5)[0m
+[0;32mI (63136) mov:    caja x=35 y=37 w=4 h=5 area=17 | contacto con el suelo (73.5, 83.5)[0m
+[0;32mI (63144) mov:    caja x=62 y=39 w=7 h=8 area=32 | contacto con el suelo (132.5, 93.5)[0m
+[0;32mI (63244) mov: [fase 2] cuadro 385: 6 mancha(s), desfase 6, 49578 us[0m
+[0;32mI (63244) mov:    caja x=48 y=3 w=17 h=9 area=96 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63246) mov:    caja x=131 y=4 w=6 h=4 area=22 | contacto con el suelo (267.5, 15.5)[0m
+[0;32mI (63254) mov:    caja x=119 y=10 w=5 h=3 area=15 | contacto con el suelo (242.5, 25.5)[0m
+[0;32mI (63262) mov:    caja x=130 y=14 w=4 h=4 area=15 | contacto con el suelo (263.5, 35.5)[0m
+[0;32mI (63269) mov:    caja x=100 y=34 w=19 h=9 area=120 | contacto con el suelo (214.5, 85.5)[0m
+[0;32mI (63277) mov:    caja x=62 y=39 w=7 h=8 area=32 | contacto con el suelo (132.5, 93.5)[0m
+[0;32mI (63377) mov: [fase 2] cuadro 386: 7 mancha(s), desfase 6, 49612 us[0m
+[0;32mI (63377) mov:    caja x=49 y=3 w=16 h=9 area=104 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (63380) mov:    caja x=131 y=4 w=6 h=4 area=20 | contacto con el suelo (267.5, 15.5)[0m
+[0;32mI (63388) mov:    caja x=119 y=10 w=5 h=3 area=15 | contacto con el suelo (242.5, 25.5)[0m
+[0;32mI (63395) mov:    caja x=130 y=13 w=4 h=4 area=15 | contacto con el suelo (263.5, 33.5)[0m
+[0;32mI (63403) mov:    caja x=100 y=34 w=22 h=9 area=130 | contacto con el suelo (215.5, 85.5)[0m
+[0;32mI (63411) mov:    caja x=35 y=37 w=4 h=4 area=15 | contacto con el suelo (73.5, 81.5)[0m
+[0;32mI (63419) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (63511) mov: [fase 2] cuadro 387: 5 mancha(s), desfase 6, 49567 us[0m
+[0;32mI (63511) mov:    caja x=48 y=3 w=17 h=9 area=111 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63514) mov:    caja x=131 y=4 w=6 h=4 area=20 | contacto con el suelo (267.5, 15.5)[0m
+[0;32mI (63521) mov:    caja x=119 y=10 w=5 h=3 area=15 | contacto con el suelo (242.5, 25.5)[0m
+[0;32mI (63529) mov:    caja x=100 y=35 w=18 h=8 area=105 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (63537) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (63644) mov: [fase 2] cuadro 388: 3 mancha(s), desfase 6, 49561 us[0m
+[0;32mI (63645) mov:    caja x=48 y=3 w=17 h=9 area=112 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63647) mov:    caja x=100 y=35 w=17 h=8 area=94 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (63655) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (63778) mov: [fase 2] cuadro 389: 3 mancha(s), desfase 6, 49537 us[0m
+[0;32mI (63778) mov:    caja x=48 y=3 w=17 h=9 area=111 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63781) mov:    caja x=100 y=35 w=17 h=8 area=94 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (63789) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (63912) mov: [fase 2] cuadro 390: 3 mancha(s), desfase 6, 49567 us[0m
+[0;32mI (63912) mov:    caja x=48 y=3 w=17 h=9 area=112 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (63914) mov:    caja x=100 y=35 w=18 h=8 area=100 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (63922) mov:    caja x=62 y=39 w=5 h=5 area=21 | contacto con el suelo (128.5, 87.5)[0m
+[0;32mI (64045) mov: [fase 2] cuadro 391: 3 mancha(s), desfase 6, 49533 us[0m
+[0;32mI (64045) mov:    caja x=48 y=3 w=17 h=9 area=111 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64048) mov:    caja x=101 y=35 w=17 h=8 area=97 | contacto con el suelo (213.5, 85.5)[0m
+[0;32mI (64056) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (64179) mov: [fase 2] cuadro 392: 3 mancha(s), desfase 6, 49560 us[0m
+[0;32mI (64179) mov:    caja x=48 y=3 w=17 h=9 area=111 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64182) mov:    caja x=101 y=35 w=17 h=8 area=93 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64189) mov:    caja x=62 y=39 w=5 h=5 area=20 | contacto con el suelo (128.5, 87.5)[0m
+[0;32mI (64312) mov: [fase 2] cuadro 393: 3 mancha(s), desfase 6, 49533 us[0m
+[0;32mI (64312) mov:    caja x=48 y=3 w=17 h=9 area=113 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64315) mov:    caja x=101 y=35 w=16 h=8 area=92 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64323) mov:    caja x=62 y=39 w=5 h=5 area=21 | contacto con el suelo (128.5, 87.5)[0m
+[0;32mI (64446) mov: [fase 2] cuadro 394: 3 mancha(s), desfase 6, 49551 us[0m
+[0;32mI (64446) mov:    caja x=48 y=3 w=17 h=9 area=112 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64449) mov:    caja x=101 y=35 w=14 h=8 area=78 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64457) mov:    caja x=62 y=39 w=5 h=5 area=21 | contacto con el suelo (128.5, 87.5)[0m
+[0;32mI (64579) mov: [fase 2] cuadro 395: 3 mancha(s), desfase 6, 49507 us[0m
+[0;32mI (64580) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64582) mov:    caja x=101 y=35 w=14 h=8 area=77 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64590) mov:    caja x=62 y=39 w=4 h=5 area=18 | contacto con el suelo (127.5, 87.5)[0m
+[0;32mI (64713) mov: [fase 2] cuadro 396: 3 mancha(s), desfase 6, 49533 us[0m
+[0;32mI (64713) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64716) mov:    caja x=101 y=35 w=14 h=8 area=76 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64724) mov:    caja x=62 y=39 w=4 h=4 area=15 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (64847) mov: [fase 2] cuadro 397: 3 mancha(s), desfase 6, 49503 us[0m
+[0;32mI (64847) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64849) mov:    caja x=101 y=35 w=11 h=8 area=64 | contacto con el suelo (212.5, 85.5)[0m
+[0;32mI (64857) mov:    caja x=62 y=39 w=4 h=4 area=15 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (64980) mov: [fase 2] cuadro 398: 3 mancha(s), desfase 6, 49513 us[0m
+[0;32mI (64980) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (64983) mov:    caja x=101 y=35 w=11 h=8 area=48 | contacto con el suelo (211.5, 85.5)[0m
+[0;32mI (64991) mov:    caja x=62 y=39 w=4 h=4 area=15 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65114) mov: [fase 2] cuadro 399: 3 mancha(s), desfase 6, 49487 us[0m
+[0;32mI (65114) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65117) mov:    caja x=103 y=38 w=8 h=4 area=28 | contacto con el suelo (213.5, 83.5)[0m
+[0;32mI (65124) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65247) mov: [fase 2] cuadro 400: 3 mancha(s), desfase 6, 49508 us[0m
+[0;32mI (65248) mov:    caja x=48 y=3 w=17 h=9 area=98 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65250) mov:    caja x=103 y=36 w=9 h=6 area=36 | contacto con el suelo (213.5, 83.5)[0m
+[0;32mI (65258) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65381) mov: [fase 2] cuadro 401: 2 mancha(s), desfase 6, 49473 us[0m
+[0;32mI (65381) mov:    caja x=48 y=3 w=17 h=9 area=94 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65384) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65515) mov: [fase 2] cuadro 402: 2 mancha(s), desfase 6, 49494 us[0m
+[0;32mI (65515) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65517) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65648) mov: [fase 2] cuadro 403: 2 mancha(s), desfase 6, 49467 us[0m
+[0;32mI (65648) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65651) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65782) mov: [fase 2] cuadro 404: 2 mancha(s), desfase 6, 49496 us[0m
+[0;32mI (65782) mov:    caja x=48 y=3 w=17 h=9 area=97 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65784) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (65915) mov: [fase 2] cuadro 405: 2 mancha(s), desfase 5, 49473 us[0m
+[0;32mI (65915) mov:    caja x=48 y=3 w=17 h=9 area=94 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (65917) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66048) mov: [fase 2] cuadro 406: 2 mancha(s), desfase 5, 49499 us[0m
+[0;32mI (66048) mov:    caja x=48 y=3 w=17 h=9 area=95 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66051) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66181) mov: [fase 2] cuadro 407: 2 mancha(s), desfase 5, 49467 us[0m
+[0;32mI (66182) mov:    caja x=48 y=3 w=17 h=9 area=94 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66184) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66315) mov: [fase 2] cuadro 408: 2 mancha(s), desfase 6, 49493 us[0m
+[0;32mI (66315) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66318) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66448) mov: [fase 2] cuadro 409: 2 mancha(s), desfase 6, 49462 us[0m
+[0;32mI (66449) mov:    caja x=48 y=3 w=17 h=9 area=96 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66451) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66582) mov: [fase 2] cuadro 410: 2 mancha(s), desfase 6, 49494 us[0m
+[0;32mI (66582) mov:    caja x=48 y=3 w=17 h=9 area=102 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66585) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66715) mov: [fase 2] cuadro 411: 2 mancha(s), desfase 6, 49464 us[0m
+[0;32mI (66716) mov:    caja x=48 y=3 w=17 h=9 area=100 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66718) mov:    caja x=62 y=39 w=4 h=4 area=14 | contacto con el suelo (127.5, 85.5)[0m
+[0;32mI (66849) mov: [fase 2] cuadro 412: 1 mancha(s), desfase 6, 49483 us[0m
+[0;32mI (66849) mov:    caja x=48 y=3 w=17 h=9 area=100 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (66983) mov: [fase 2] cuadro 413: 1 mancha(s), desfase 6, 49466 us[0m
+[0;32mI (66983) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67116) mov: [fase 2] cuadro 414: 1 mancha(s), desfase 6, 49483 us[0m
+[0;32mI (67117) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67250) mov: [fase 2] cuadro 415: 1 mancha(s), desfase 6, 49458 us[0m
+[0;32mI (67250) mov:    caja x=48 y=3 w=17 h=9 area=100 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67384) mov: [fase 2] cuadro 416: 1 mancha(s), desfase 6, 49488 us[0m
+[0;32mI (67384) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67517) mov: [fase 2] cuadro 417: 1 mancha(s), desfase 6, 49458 us[0m
+[0;32mI (67518) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67651) mov: [fase 2] cuadro 418: 1 mancha(s), desfase 6, 49489 us[0m
+[0;32mI (67651) mov:    caja x=48 y=3 w=17 h=9 area=99 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67785) mov: [fase 2] cuadro 419: 1 mancha(s), desfase 6, 49466 us[0m
+[0;32mI (67785) mov:    caja x=48 y=3 w=17 h=9 area=98 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (67918) mov: [fase 2] cuadro 420: 1 mancha(s), desfase 6, 49481 us[0m
+[0;32mI (67918) mov:    caja x=48 y=3 w=17 h=9 area=98 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (68052) mov: [fase 2] cuadro 421: 1 mancha(s), desfase 6, 49462 us[0m
+[0;32mI (68052) mov:    caja x=48 y=3 w=17 h=9 area=98 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (68185) mov: [fase 2] cuadro 422: 1 mancha(s), desfase 6, 49480 us[0m
+[0;32mI (68186) mov:    caja x=48 y=3 w=17 h=9 area=95 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (68319) mov: [fase 2] cuadro 423: 1 mancha(s), desfase 6, 49456 us[0m
+[0;32mI (68319) mov:    caja x=48 y=3 w=17 h=8 area=90 | contacto con el suelo (111.5, 21.5)[0m
+[0;32mI (68453) mov: [fase 2] cuadro 424: 1 mancha(s), desfase 6, 49484 us[0m
+[0;32mI (68453) mov:    caja x=48 y=3 w=17 h=7 area=77 | contacto con el suelo (111.5, 19.5)[0m
+[0;32mI (68586) mov: [fase 2] cuadro 425: 2 mancha(s), desfase 6, 49452 us[0m
+[0;32mI (68587) mov:    caja x=49 y=3 w=16 h=7 area=59 | contacto con el suelo (108.5, 19.5)[0m
+[0;32mI (68589) mov:    caja x=42 y=14 w=4 h=4 area=14 | contacto con el suelo (87.5, 35.5)[0m
+[0;32mI (68720) mov: [fase 2] cuadro 426: 1 mancha(s), desfase 6, 49472 us[0m
+[0;32mI (68720) mov:    caja x=48 y=3 w=16 h=7 area=55 | contacto con el suelo (105.5, 19.5)[0m
+[0;32mI (68854) mov: [fase 2] cuadro 427: 1 mancha(s), desfase 6, 49445 us[0m
+[0;32mI (68854) mov:    caja x=49 y=3 w=14 h=7 area=52 | contacto con el suelo (106.5, 19.5)[0m
+[0;32mI (68987) mov: [fase 2] cuadro 428: 1 mancha(s), desfase 6, 49469 us[0m
+[0;32mI (68987) mov:    caja x=48 y=3 w=16 h=8 area=61 | contacto con el suelo (99.5, 21.5)[0m
+[0;32mI (69120) mov: [fase 2] cuadro 429: 1 mancha(s), desfase 6, 49457 us[0m
+[0;32mI (69121) mov:    caja x=48 y=3 w=16 h=9 area=90 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (69254) mov: [fase 2] cuadro 430: 1 mancha(s), desfase 5, 49500 us[0m
+[0;32mI (69254) mov:    caja x=48 y=3 w=20 h=9 area=117 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (69387) mov: [fase 2] cuadro 431: 1 mancha(s), desfase 5, 49502 us[0m
+[0;32mI (69387) mov:    caja x=49 y=0 w=23 h=12 area=167 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (69520) mov: [fase 2] cuadro 432: 1 mancha(s), desfase 5, 49514 us[0m
+[0;32mI (69520) mov:    caja x=48 y=0 w=28 h=11 area=147 | contacto con el suelo (111.5, 21.5)[0m
+[0;32mI (69653) mov: [fase 2] cuadro 433: 1 mancha(s), desfase 6, 49463 us[0m
+[0;32mI (69653) mov:    caja x=48 y=0 w=17 h=12 area=112 | contacto con el suelo (111.5, 23.5)[0m
+[0;32mI (69787) mov: [fase 2] cuadro 434: 1 mancha(s), desfase 6, 49489 us[0m
+[0;32mI (69787) mov:    caja x=49 y=0 w=16 h=12 area=109 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (69920) mov: [fase 2] cuadro 435: 1 mancha(s), desfase 6, 49459 us[0m
+[0;32mI (69921) mov:    caja x=49 y=0 w=16 h=12 area=108 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (70054) mov: [fase 2] cuadro 436: 1 mancha(s), desfase 6, 49481 us[0m
+[0;32mI (70054) mov:    caja x=49 y=0 w=16 h=11 area=102 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (70188) mov: [fase 2] cuadro 437: 1 mancha(s), desfase 6, 49467 us[0m
+[0;32mI (70188) mov:    caja x=49 y=0 w=16 h=12 area=111 | contacto con el suelo (112.5, 23.5)[0m
+[0;32mI (70321) mov: [fase 2] cuadro 438: 1 mancha(s), desfase 6, 49485 us[0m
+[0;32mI (70321) mov:    caja x=49 y=0 w=16 h=11 area=108 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (70455) mov: [fase 2] cuadro 439: 4 mancha(s), desfase -24, 49503 us[0m
+[0;32mI (70455) mov:    caja x=48 y=3 w=17 h=8 area=78 | contacto con el suelo (111.5, 21.5)[0m
+[0;32mI (70458) mov:    caja x=158 y=36 w=2 h=7 area=14 | contacto con el suelo (317.5, 85.5)[0m
+[0;32mI (70466) mov:    caja x=89 y=51 w=7 h=4 area=25 | contacto con el suelo (184.5, 109.5)[0m
+[0;32mI (70473) mov:    caja x=71 y=52 w=5 h=4 area=18 | contacto con el suelo (146.5, 111.5)[0m
+[0;32mI (70589) mov: [fase 2] cuadro 440: 3 mancha(s), desfase -23, 49513 us[0m
+[0;32mI (70589) mov:    caja x=50 y=3 w=15 h=8 area=68 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (70592) mov:    caja x=153 y=36 w=7 h=8 area=41 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (70599) mov:    caja x=70 y=51 w=6 h=5 area=24 | contacto con el suelo (145.5, 111.5)[0m
+[0;32mI (70723) mov: [fase 2] cuadro 441: 4 mancha(s), desfase -26, 49926 us[0m
+[0;32mI (70723) mov:    caja x=72 y=0 w=38 h=41 area=896 | contacto con el suelo (164.5, 81.5)[0m
+[0;32mI (70726) mov:    caja x=49 y=3 w=16 h=8 area=71 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (70733) mov:    caja x=41 y=21 w=6 h=9 area=38 | contacto con el suelo (88.5, 59.5)[0m
+[0;32mI (70741) mov:    caja x=155 y=35 w=5 h=9 area=30 | contacto con el suelo (317.5, 87.5)[0m
+[0;32mI (70856) mov: [fase 2] cuadro 442: 5 mancha(s), desfase -25, 49781 us[0m
+[0;32mI (70856) mov:    caja x=97 y=0 w=3 h=5 area=15 | contacto con el suelo (196.5, 9.5)[0m
+[0;32mI (70859) mov:    caja x=49 y=3 w=16 h=8 area=72 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (70867) mov:    caja x=73 y=11 w=32 h=26 area=492 | contacto con el suelo (163.5, 73.5)[0m
+[0;32mI (70875) mov:    caja x=41 y=21 w=5 h=5 area=21 | contacto con el suelo (86.5, 51.5)[0m
+[0;32mI (70882) mov:    caja x=153 y=37 w=7 h=6 area=39 | contacto con el suelo (313.5, 85.5)[0m
+I (70990) mov: [fase 2] cuadro 443: 3 mancha(s), desfase -20, 49498 us
+[0;32mI (70990) mov:    caja x=49 y=3 w=16 h=8 area=71 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (70993) mov:    caja x=65 y=23 w=6 h=4 area=21 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71000) mov:    caja x=153 y=35 w=7 h=9 area=49 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (71123) mov: [fase 2] cuadro 444: 3 mancha(s), desfase -20, 49515 us[0m
+[0;32mI (71124) mov:    caja x=50 y=3 w=15 h=8 area=68 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71126) mov:    caja x=65 y=23 w=6 h=4 area=22 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71134) mov:    caja x=152 y=35 w=8 h=9 area=55 | contacto con el suelo (313.5, 87.5)[0m
+[0;32mI (71257) mov: [fase 2] cuadro 445: 4 mancha(s), desfase -17, 49545 us[0m
+[0;32mI (71257) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71260) mov:    caja x=65 y=15 w=6 h=12 area=42 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71268) mov:    caja x=153 y=36 w=7 h=9 area=48 | contacto con el suelo (315.5, 89.5)[0m
+[0;32mI (71275) mov:    caja x=60 y=50 w=16 h=6 area=71 | contacto con el suelo (135.5, 111.5)[0m
+[0;32mI (71391) mov: [fase 2] cuadro 446: 5 mancha(s), desfase -16, 49549 us[0m
+[0;32mI (71391) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71394) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71401) mov:    caja x=152 y=35 w=8 h=9 area=61 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (71409) mov:    caja x=69 y=51 w=7 h=5 area=30 | contacto con el suelo (144.5, 111.5)[0m
+[0;32mI (71417) mov:    caja x=60 y=52 w=4 h=4 area=15 | contacto con el suelo (123.5, 111.5)[0m
+[0;32mI (71524) mov: [fase 2] cuadro 447: 4 mancha(s), desfase -16, 49538 us[0m
+[0;32mI (71525) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71527) mov:    caja x=65 y=13 w=6 h=14 area=57 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71535) mov:    caja x=156 y=36 w=4 h=7 area=26 | contacto con el suelo (315.5, 85.5)[0m
+[0;32mI (71543) mov:    caja x=60 y=51 w=16 h=6 area=81 | contacto con el suelo (135.5, 113.5)[0m
+[0;32mI (71658) mov: [fase 2] cuadro 448: 5 mancha(s), desfase -15, 49524 us[0m
+[0;32mI (71658) mov:    caja x=50 y=3 w=15 h=8 area=68 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71661) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71669) mov:    caja x=154 y=36 w=6 h=9 area=39 | contacto con el suelo (315.5, 89.5)[0m
+[0;32mI (71676) mov:    caja x=60 y=51 w=6 h=6 area=31 | contacto con el suelo (125.5, 113.5)[0m
+[0;32mI (71684) mov:    caja x=71 y=52 w=5 h=4 area=18 | contacto con el suelo (146.5, 111.5)[0m
+[0;32mI (71792) mov: [fase 2] cuadro 449: 4 mancha(s), desfase -12, 49540 us[0m
+[0;32mI (71792) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71795) mov:    caja x=65 y=15 w=6 h=12 area=46 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71803) mov:    caja x=152 y=35 w=8 h=9 area=60 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (71810) mov:    caja x=60 y=50 w=13 h=7 area=69 | contacto con el suelo (131.5, 113.5)[0m
+[0;32mI (71926) mov: [fase 2] cuadro 450: 4 mancha(s), desfase -11, 49552 us[0m
+[0;32mI (71926) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (71928) mov:    caja x=65 y=21 w=6 h=6 area=27 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (71936) mov:    caja x=152 y=34 w=8 h=10 area=52 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (71944) mov:    caja x=60 y=50 w=13 h=7 area=67 | contacto con el suelo (131.5, 113.5)[0m
+[0;32mI (72059) mov: [fase 2] cuadro 451: 4 mancha(s), desfase -8, 49535 us[0m
+[0;32mI (72059) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (72062) mov:    caja x=65 y=21 w=6 h=6 area=28 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72070) mov:    caja x=152 y=35 w=8 h=9 area=62 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (72077) mov:    caja x=60 y=48 w=13 h=9 area=78 | contacto con el suelo (131.5, 113.5)[0m
+[0;32mI (72193) mov: [fase 2] cuadro 452: 4 mancha(s), desfase -7, 49568 us[0m
+[0;32mI (72193) mov:    caja x=49 y=3 w=16 h=8 area=71 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (72196) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72203) mov:    caja x=152 y=33 w=8 h=12 area=76 | contacto con el suelo (312.5, 89.5)[0m
+[0;32mI (72211) mov:    caja x=60 y=48 w=13 h=9 area=78 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72326) mov: [fase 2] cuadro 453: 4 mancha(s), desfase -7, 49541 us[0m
+[0;32mI (72327) mov:    caja x=50 y=3 w=15 h=8 area=67 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (72329) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72337) mov:    caja x=151 y=33 w=9 h=12 area=76 | contacto con el suelo (312.5, 89.5)[0m
+[0;32mI (72345) mov:    caja x=60 y=48 w=13 h=9 area=89 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72460) mov: [fase 2] cuadro 454: 4 mancha(s), desfase -7, 49570 us[0m
+[0;32mI (72460) mov:    caja x=48 y=3 w=17 h=8 area=75 | contacto con el suelo (111.5, 21.5)[0m
+[0;32mI (72463) mov:    caja x=65 y=23 w=6 h=4 area=21 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72471) mov:    caja x=152 y=34 w=8 h=11 area=71 | contacto con el suelo (311.5, 89.5)[0m
+[0;32mI (72479) mov:    caja x=60 y=48 w=13 h=9 area=90 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72594) mov: [fase 2] cuadro 455: 4 mancha(s), desfase -6, 49552 us[0m
+[0;32mI (72594) mov:    caja x=48 y=3 w=17 h=8 area=78 | contacto con el suelo (111.5, 21.5)[0m
+[0;32mI (72597) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72604) mov:    caja x=151 y=33 w=9 h=11 area=79 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (72612) mov:    caja x=60 y=48 w=14 h=9 area=80 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72728) mov: [fase 2] cuadro 456: 4 mancha(s), desfase -6, 49573 us[0m
+[0;32mI (72728) mov:    caja x=50 y=3 w=15 h=8 area=65 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (72730) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72738) mov:    caja x=151 y=34 w=9 h=10 area=74 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (72746) mov:    caja x=60 y=48 w=14 h=9 area=93 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72861) mov: [fase 2] cuadro 457: 4 mancha(s), desfase -6, 49539 us[0m
+[0;32mI (72861) mov:    caja x=50 y=3 w=15 h=8 area=65 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (72864) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (72872) mov:    caja x=151 y=34 w=9 h=10 area=76 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (72880) mov:    caja x=60 y=48 w=14 h=9 area=82 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (72995) mov: [fase 2] cuadro 458: 4 mancha(s), desfase -6, 49576 us[0m
+[0;32mI (72995) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (72998) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (73005) mov:    caja x=151 y=34 w=9 h=10 area=73 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (73013) mov:    caja x=60 y=48 w=14 h=9 area=93 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73129) mov: [fase 2] cuadro 459: 4 mancha(s), desfase -6, 49555 us[0m
+[0;32mI (73129) mov:    caja x=50 y=3 w=15 h=8 area=65 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73131) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (73139) mov:    caja x=151 y=34 w=9 h=10 area=73 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (73147) mov:    caja x=60 y=48 w=14 h=9 area=93 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73262) mov: [fase 2] cuadro 460: 4 mancha(s), desfase -5, 49565 us[0m
+[0;32mI (73263) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73265) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (73273) mov:    caja x=151 y=33 w=9 h=11 area=82 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (73281) mov:    caja x=60 y=48 w=14 h=9 area=80 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73396) mov: [fase 2] cuadro 461: 4 mancha(s), desfase -5, 49549 us[0m
+[0;32mI (73396) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73399) mov:    caja x=65 y=22 w=6 h=5 area=24 | contacto con el suelo (135.5, 53.5)[0m
+[0;32mI (73406) mov:    caja x=151 y=34 w=9 h=10 area=73 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (73414) mov:    caja x=60 y=48 w=14 h=9 area=92 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73529) mov: [fase 2] cuadro 462: 4 mancha(s), desfase -4, 49565 us[0m
+[0;32mI (73530) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73532) mov:    caja x=65 y=22 w=5 h=5 area=21 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (73540) mov:    caja x=151 y=33 w=9 h=11 area=81 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (73548) mov:    caja x=60 y=48 w=14 h=9 area=89 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73663) mov: [fase 2] cuadro 463: 4 mancha(s), desfase -3, 49530 us[0m
+[0;32mI (73663) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73666) mov:    caja x=65 y=22 w=5 h=5 area=21 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (73674) mov:    caja x=151 y=33 w=9 h=11 area=83 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (73681) mov:    caja x=60 y=48 w=13 h=9 area=63 | contacto con el suelo (130.5, 113.5)[0m
+[0;32mI (73797) mov: [fase 2] cuadro 464: 5 mancha(s), desfase -3, 49553 us[0m
+[0;32mI (73797) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73800) mov:    caja x=65 y=22 w=5 h=5 area=21 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (73807) mov:    caja x=151 y=34 w=9 h=10 area=81 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (73815) mov:    caja x=68 y=49 w=5 h=6 area=27 | contacto con el suelo (140.5, 109.5)[0m
+[0;32mI (73823) mov:    caja x=60 y=52 w=3 h=5 area=15 | contacto con el suelo (122.5, 113.5)[0m
+[0;32mI (73930) mov: [fase 2] cuadro 465: 4 mancha(s), desfase -2, 49524 us[0m
+[0;32mI (73931) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (73933) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (73941) mov:    caja x=151 y=33 w=9 h=11 area=80 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (73949) mov:    caja x=68 y=49 w=6 h=5 area=25 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74064) mov: [fase 2] cuadro 466: 4 mancha(s), desfase -2, 49556 us[0m
+[0;32mI (74064) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74067) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74075) mov:    caja x=151 y=33 w=9 h=11 area=82 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (74083) mov:    caja x=68 y=49 w=6 h=5 area=25 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74198) mov: [fase 2] cuadro 467: 4 mancha(s), desfase -2, 49532 us[0m
+[0;32mI (74198) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74201) mov:    caja x=65 y=22 w=5 h=5 area=21 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74208) mov:    caja x=150 y=34 w=10 h=10 area=80 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (74216) mov:    caja x=68 y=48 w=6 h=6 area=28 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74332) mov: [fase 2] cuadro 468: 4 mancha(s), desfase -2, 49552 us[0m
+[0;32mI (74332) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74334) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74342) mov:    caja x=150 y=33 w=10 h=11 area=87 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (74350) mov:    caja x=68 y=48 w=6 h=6 area=29 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74465) mov: [fase 2] cuadro 469: 4 mancha(s), desfase -2, 49514 us[0m
+[0;32mI (74465) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74468) mov:    caja x=65 y=22 w=5 h=5 area=21 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74476) mov:    caja x=151 y=34 w=9 h=10 area=76 | contacto con el suelo (311.5, 87.5)[0m
+[0;32mI (74484) mov:    caja x=68 y=48 w=6 h=6 area=29 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74599) mov: [fase 2] cuadro 470: 4 mancha(s), desfase -1, 49537 us[0m
+[0;32mI (74599) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74602) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74609) mov:    caja x=151 y=33 w=9 h=11 area=81 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (74617) mov:    caja x=68 y=49 w=5 h=5 area=21 | contacto con el suelo (140.5, 107.5)[0m
+[0;32mI (74732) mov: [fase 2] cuadro 471: 4 mancha(s), desfase -1, 49506 us[0m
+[0;32mI (74733) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74735) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74743) mov:    caja x=151 y=33 w=9 h=11 area=80 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (74751) mov:    caja x=68 y=48 w=6 h=6 area=28 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (74866) mov: [fase 2] cuadro 472: 4 mancha(s), desfase -1, 49527 us[0m
+[0;32mI (74866) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (74869) mov:    caja x=65 y=23 w=5 h=4 area=18 | contacto con el suelo (134.5, 53.5)[0m
+[0;32mI (74877) mov:    caja x=151 y=34 w=9 h=10 area=79 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (74885) mov:    caja x=68 y=48 w=6 h=6 area=28 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (75000) mov: [fase 2] cuadro 473: 4 mancha(s), desfase -1, 49518 us[0m
+[0;32mI (75000) mov:    caja x=49 y=0 w=16 h=11 area=78 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (75003) mov:    caja x=60 y=17 w=7 h=4 area=22 | contacto con el suelo (126.5, 41.5)[0m
+[0;32mI (75011) mov:    caja x=151 y=34 w=9 h=9 area=76 | contacto con el suelo (310.5, 85.5)[0m
+[0;32mI (75018) mov:    caja x=68 y=48 w=6 h=6 area=28 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (75134) mov: [fase 2] cuadro 474: 4 mancha(s), desfase -1, 49541 us[0m
+[0;32mI (75134) mov:    caja x=50 y=3 w=15 h=8 area=69 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (75137) mov:    caja x=60 y=17 w=7 h=4 area=22 | contacto con el suelo (126.5, 41.5)[0m
+[0;32mI (75144) mov:    caja x=150 y=34 w=10 h=10 area=80 | contacto con el suelo (312.5, 87.5)[0m
+[0;32mI (75152) mov:    caja x=68 y=48 w=6 h=6 area=28 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (75267) mov: [fase 2] cuadro 475: 4 mancha(s), desfase 0, 49518 us[0m
+[0;32mI (75268) mov:    caja x=49 y=0 w=16 h=11 area=81 | contacto con el suelo (112.5, 21.5)[0m
+[0;32mI (75270) mov:    caja x=60 y=17 w=7 h=4 area=22 | contacto con el suelo (126.5, 41.5)[0m
+[0;32mI (75278) mov:    caja x=151 y=33 w=9 h=11 area=84 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (75286) mov:    caja x=68 y=48 w=6 h=6 area=27 | contacto con el suelo (141.5, 107.5)[0m
+[0;32mI (75401) mov: [fase 2] cuadro 476: 4 mancha(s), desfase 0, 49539 us[0m
+[0;32mI (75401) mov:    caja x=50 y=0 w=15 h=11 area=78 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (75404) mov:    caja x=60 y=17 w=7 h=4 area=22 | contacto con el suelo (126.5, 41.5)[0m
+[0;32mI (75412) mov:    caja x=151 y=34 w=9 h=10 area=78 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (75419) mov:    caja x=69 y=49 w=5 h=5 area=21 | contacto con el suelo (142.5, 107.5)[0m
+[0;32mI (75535) mov: [fase 2] cuadro 477: 4 mancha(s), desfase 0, 49519 us[0m
+[0;32mI (75535) mov:    caja x=50 y=3 w=15 h=8 area=66 | contacto con el suelo (113.5, 21.5)[0m
+[0;32mI (75538) mov:    caja x=60 y=17 w=7 h=4 area=22 | contacto con el suelo (126.5, 41.5)[0m
+[0;32mI (75545) mov:    caja x=150 y=33 w=10 h=11 area=87 | contacto con el suelo (310.5, 87.5)[0m
+[0;32mI (75553) mov:    caja x=68 y=49 w=5 h=5 area=21 | contacto con el suelo (140.5, 107.5)[0m
+[0;32mI (75561) mov: ================ RESUMEN ================[0m
+[0;32mI (75566) mov: Fase 1 (quieta):  224 cuadros, 0 con manchas (FALSAS), 0 cambios globales, desfase máx. 14[0m
+[0;32mI (75575) mov: Fase 2 (mov.):    254 cuadros, 211 con manchas, 0 cambios globales, desfase máx. 26[0m
+[0;32mI (75584) mov: Detector: promedio 49577 us, máximo 50977 us | imágenes guardadas: 0 en fase 1, 8 en fase 2[0m
+[0;32mI (75594) mov: FIN: ya puede retirar la tarjeta[0m
+[0;32mI (75598) main_task: Returned from app_main()[0m

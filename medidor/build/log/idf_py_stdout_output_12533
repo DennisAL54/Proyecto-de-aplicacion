@@ -1,0 +1,156 @@
+Command: /home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dennis/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dennis/proyectos/medidor/build/medidor.elf /home/dennis/proyectos/medidor/build/bootloader/bootloader.elf -m '/home/dennis/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dennis/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (102) esp_image: segment 1: paddr=00022c28 vaddr=3fc97600 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420080e7
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1668
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x3178
+entry 0x403c894c
+[0;32mI (24) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 15 2026 17:28:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.4[0m
+[0;32mI (31) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=12c00h ( 76800) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00022c28 vaddr=3fc97600 size=05d54h ( 23892) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028984 vaddr=40378000 size=07694h ( 30356) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=3ffa8h (262056) map[0m
+[0;32mI (155) esp_image: segment 4: paddr=0006ffd0 vaddr=4037f694 size=07f40h ( 32576) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00077f18 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (180) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (180) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (182) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (187) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (191) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (195) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (200) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (205) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (209) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (215) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (219) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (224) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (227) esp_psram: Speed: 80MHz[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (518) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (526) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (527) cpu_start: Pro cpu start user code[0m
+[0;32mI (527) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (528) app_init: Application information:[0m
+[0;32mI (532) app_init: Project name:     medidor[0m
+[0;32mI (536) app_init: App version:      1[0m
+[0;32mI (539) app_init: Compile time:     Oct 15 2026 17:28:07[0m
+[0;32mI (544) app_init: ELF file SHA256:  6c1d01a31...[0m
+[0;32mI (549) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (553) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (556) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (560) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (564) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (571) heap_init: At 3FCA07C0 len 00048F50 (291 KiB): RAM[0m
+[0;32mI (576) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (581) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (586) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (593) spi_flash: detected chip: boya[0m
+[0;32mI (596) spi_flash: flash io: qio[0m
+[0;32mI (599) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (605) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (612) main_task: Started on CPU0[0m
+[0;32mI (615) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (623) main_task: Calling app_main()[0m
+[0;32mI (627) main_task: Returned from app_main()[0m
+Name: SD   
+Type: SDHC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 59200MB
+CSD: ver=2, sector_size=512, capacity=121241600 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (675) vivo: homografía: [3.15909 -0.74039 -504.66180 | 0.00000 -6.21923 1029.56807 | 0.00000 0.48669 1.00000][0m
+[0;32mI (682) vivo: zona de medición: Y de -2.0 a 26.0 m[0m
+[0;32mI (685) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (688) cam_hal: cam init ok[0m
+[0;32mI (690) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (694) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (708) ov3640: Mismatch PID=0x5640[0m
+[0;32mI (710) ov3660: Mismatch PID=0x5640[0m
+[0;32mI (711) camera: Camera PID=0x5640 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (711) camera: Detected OV5640 camera[0m
+[0;32mI (713) camera: Detected camera at address=0x3c[0m
+[0;32mI (1402) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1402) s3 ll_cam: node_size: 3840, nodes_per_line: 1, lines_per_node: 6[0m
+[0;32mI (1402) s3 ll_cam: dma_half_buffer_min:  3840, dma_half_buffer: 15360, lines_per_half_buffer: 24, dma_buffer_size: 30720[0m
+[0;32mI (1412) cam_hal: buffer_size: 30720, half_buffer_size: 15360, node_buffer_size: 3840, node_cnt: 8, total_cnt: 10[0m
+[0;32mI (1422) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1427) cam_hal: Allocating 153600 Byte frame buffer in PSRAM[0m
+[0;32mI (1433) cam_hal: cam config ok[0m
+[0;32mI (1447) ov5640: Set PLL: bypass: 0, multiplier: 8, sys_div: 1, pre_div: 1, root_2x: 0, pclk_root_div: 1, pclk_manual: 1, pclk_div: 4[0m
+[0;32mI (1448) ov5640: Calculated XVCLK: 20000000 Hz, REFIN: 20000000 Hz, VCO: 160000000 Hz, PLL_CLK: 64000000 Hz, SYSCLK: 16000000 Hz, PCLK: 8000000 Hz[0m
+[0;32mI (7161) vivo: encuadre inicial guardado: /sdcard/encuadre.bmp[0m
+[0;33mW (7161) vivo: >>> Midiendo 120 s. El primer cuadro es el fondo: no debe haber vehículos en la escena al empezar.[0m
+[0;32mI (16258) vivo: vehículo 1: 35.4 km/h, carril X=-5.60 m, 15 muestras[0m
+[0;32mI (23576) vivo: vehículo 7: 27.6 km/h, carril X=-6.93 m, 12 muestras[0m
+[0;32mI (23576) vivo: vehículo 9: 31.9 km/h, carril X=-5.26 m, 7 muestras[0m
+[0;32mI (23966) vivo: vehículo 6: 9.3 km/h, carril X=-0.52 m, 19 muestras[0m
+[0;32mI (25697) vivo: vehículo 10: 36.3 km/h, carril X=-5.57 m, 12 muestras[0m
+[0;32mI (29962) vivo: vehículo 16: 32.1 km/h, carril X=-5.04 m, 16 muestras[0m
+[0;32mI (33630) vivo: vehículo 21: 36.8 km/h, carril X=-6.45 m, 11 muestras[0m
+[0;32mI (34096) vivo: vehículo 23: 47.7 km/h, carril X=-5.59 m, 7 muestras[0m
+[0;32mI (34230) vivo: vehículo 18: 9.9 km/h, carril X=-1.63 m, 25 muestras[0m
+[0;32mI (36094) vivo: vehículo 30: 51.6 km/h, carril X=-4.37 m, 7 muestras[0m
+[0;32mI (39295) vivo: vehículo 31: 38.3 km/h, carril X=-4.95 m, 9 muestras[0m
+[0;32mI (41685) vivo: vehículo 37: 48.2 km/h, carril X=-5.13 m, 9 muestras[0m
+[0;32mI (50117) vivo: vehículo 38: 55.1 km/h, carril X=-4.33 m, 7 muestras[0m
+[0;32mI (54932) vivo: vehículo 42: 15.3 km/h, carril X=2.25 m, 12 muestras[0m
+[0;32mI (56808) vivo: vehículo 45: 32.3 km/h, carril X=-5.01 m, 12 muestras[0m
+[0;32mI (58810) vivo: vehículo 48: 35.1 km/h, carril X=-5.86 m, 8 muestras[0m
+[0;32mI (62289) vivo: vehículo 46: 6.6 km/h, carril X=1.13 m, 25 muestras[0m
+[0;32mI (62823) vivo: vehículo 50: 32.5 km/h, carril X=-6.00 m, 9 muestras[0m
+[0;32mI (63492) vivo: vehículo 51: 46.5 km/h, carril X=-5.74 m, 7 muestras[0m
+[0;32mI (65751) vivo: vehículo 47: 6.9 km/h, carril X=-1.33 m, 34 muestras[0m
+[0;32mI (67506) vivo: vehículo 54: 8.1 km/h, carril X=-2.05 m, 20 muestras[0m
+[0;32mI (67640) vivo: vehículo 55: 7.7 km/h, carril X=-0.37 m, 12 muestras[0m
+[0;32mI (67907) vivo: vehículo 56: 22.0 km/h, carril X=-9.02 m, 9 muestras[0m
+[0;32mI (75133) vivo: vehículo 62: 25.7 km/h, carril X=-5.15 m, 24 muestras[0m
+[0;32mI (79554) vivo: vehículo 64: 6.9 km/h, carril X=-0.98 m, 22 muestras[0m
+[0;32mI (80626) vivo: vehículo 65: 25.9 km/h, carril X=-5.86 m, 16 muestras[0m
+[0;32mI (83975) vivo: vehículo 68: 55.2 km/h, carril X=-10.24 m, 6 muestras[0m
+[0;32mI (84109) vivo: vehículo 67: 23.8 km/h, carril X=-4.59 m, 21 muestras[0m
+[0;32mI (91344) vivo: vehículo 70: 28.0 km/h, carril X=-4.85 m, 17 muestras[0m
+[0;32mI (92419) vivo: vehículo 73: 33.5 km/h, carril X=-6.53 m, 7 muestras[0m
+[0;32mI (96575) vivo: vehículo 75: 42.8 km/h, carril X=-6.82 m, 5 muestras[0m
+[0;32mI (97782) vivo: vehículo 74: 10.3 km/h, carril X=-1.93 m, 32 muestras[0m
+[0;32mI (98451) vivo: vehículo 77: 35.0 km/h, carril X=-6.07 m, 16 muestras[0m
+[0;32mI (101267) vivo: vehículo 80: 36.5 km/h, carril X=-5.44 m, 15 muestras[0m
+[0;32mI (102474) vivo: vehículo 81: 32.2 km/h, carril X=-6.30 m, 13 muestras[0m
+[0;32mI (103011) vivo: vehículo 82: 50.3 km/h, carril X=-3.75 m, 8 muestras[0m
+[0;32mI (103413) vivo: vehículo 84: 39.2 km/h, carril X=-6.31 m, 5 muestras[0m
+[0;32mI (105695) vivo: vehículo 88: 63.7 km/h, carril X=-3.32 m, 6 muestras[0m
+[0;32mI (105964) vivo: vehículo 86: 34.0 km/h, carril X=-6.02 m, 14 muestras[0m
+[0;32mI (110795) vivo: vehículo 93: 38.9 km/h, carril X=-3.59 m, 12 muestras[0m
+[0;32mI (116431) vivo: vehículo 100: 27.5 km/h, carril X=-5.77 m, 15 muestras[0m
+[0;32mI (116967) vivo: vehículo 102: 29.3 km/h, carril X=-3.34 m, 15 muestras[0m
+[0;32mI (121799) vivo: vehículo 107: 23.2 km/h, carril X=-5.96 m, 22 muestras[0m
+[0;32mI (123679) vivo: vehículo 109: 26.9 km/h, carril X=-5.28 m, 19 muestras[0m
+[0;32mI (125832) vivo: vehículo 110: 4.7 km/h, carril X=1.40 m, 27 muestras[0m
+[0;32mI (125963) vivo: vehículo 112: 28.1 km/h, carril X=-5.68 m, 18 muestras[0m
+[0;32mI (128860) vivo: vehículo 117 (al cerrar): 28.0 km/h, carril X=-1.80 m[0m
+[0;32mI (128861) vivo: vehículo 116 (al cerrar): 40.5 km/h, carril X=-4.03 m[0m
+[0;32mI (129489) vivo: cuadros: 821 (6.8 FPS), con detecciones: 784, detecciones crudas guardadas: 2616, imágenes de depuración: 15[0m
+[0;32mI (129490) vivo: detector: medio 50088 us, máximo 50843 us | cadena: medio 808 us, máximo 27700 us[0m
+[0;32mI (129499) vivo: vehículos registrados: 48, errores de escritura: 0[0m
+[0;32mI (129505) main: SD desmontada: ya puede sacar la tarjeta[0m
