@@ -15,6 +15,11 @@
 
 static const char *TAG = "vivo";
 #define VIVO_MAX_IMG 15                   // imágenes de depuración que se guardan durante la medición
+// 1 = guarda imágenes de depuración en /sdcard/mov (cada una detiene el programa ~0,8 s y se pierden cuadros).
+// 0 = versión de medición: no guarda imágenes (REQ-SEG-002).
+#ifndef VIVO_GUARDAR_IMAGENES
+#define VIVO_GUARDAR_IMAGENES 0
+#endif
 #define VIVO_SEP_IMG_S 4.0                // separación mínima entre imágenes (s)
 #define VIVO_MAX_REG 8000                 // detecciones crudas que se guardan (unos 128 KB en PSRAM)
 
@@ -79,15 +84,15 @@ static bool guardar_encuadre(const char *ruta, const uint8_t *rgb565, int W, int
     return true;
 }
 
-// Lee calibracion.txt: 4 líneas "u v X Y" y, opcional, "zona ymin ymax".
+// Lee calibracion.txt: 4 líneas "u v X Y" y, opcional, "zona ymin ymax" y "carril xmin xmax".
 #define VIVO_MAX_IGN 4
 static bool leer_calibracion(const char *ruta, Homografia *H, double *ymin, double *ymax, bool *hay_zona, double (*img)[2],
-                             int (*ign)[4], int *nign)
+                             int (*ign)[4], int *nign, double *xmin, double *xmax, bool *hay_carril)
 {
     FILE *f = fopen(ruta, "r");
     if (!f) { ESP_LOGE(TAG, "falta %s", ruta); return false; }
     double mun[4][2];
-    int n = 0; *hay_zona = false; *nign = 0;
+    int n = 0; *hay_zona = false; *hay_carril = false; *nign = 0;
     char linea[96];
     while (fgets(linea, sizeof linea, f)) {
         double a, b, c, d;
@@ -95,6 +100,8 @@ static bool leer_calibracion(const char *ruta, Homografia *H, double *ymin, doub
             img[n][0] = a; img[n][1] = b; mun[n][0] = c; mun[n][1] = d; n++;
         } else if (sscanf(linea, "zona %lf %lf", &a, &b) == 2) {
             *ymin = a; *ymax = b; *hay_zona = true;
+        } else if (sscanf(linea, "carril %lf %lf", &a, &b) == 2) {
+            *xmin = a; *xmax = b; *hay_carril = true;
         } else {
             int x0, y0, x1, y1;
             if (*nign < VIVO_MAX_IGN && sscanf(linea, "ignorar %d %d %d %d", &x0, &y0, &x1, &y1) == 4) {
@@ -114,15 +121,16 @@ void vivo_ejecutar(int duracion_s)
 {
     mkdir("/sdcard/salida", 0777);
     mkdir("/sdcard/mov", 0777);
-    Homografia H; double ymin = 0, ymax = 0; bool hay_zona = false;
+    Homografia H; double ymin = 0, ymax = 0, xmin = 0, xmax = 0; bool hay_zona = false, hay_carril = false;
     double puntos_img[4][2]; int ign[VIVO_MAX_IGN][4], nign = 0;
-    if (!leer_calibracion("/sdcard/calibracion.txt", &H, &ymin, &ymax, &hay_zona, puntos_img, ign, &nign)) return;
+    if (!leer_calibracion("/sdcard/calibracion.txt", &H, &ymin, &ymax, &hay_zona, puntos_img, ign, &nign, &xmin, &xmax, &hay_carril)) return;
     if (nign > 0) ESP_LOGI(TAG, "zonas ignoradas: %d", nign);
     if (!cad_iniciar(&C, H, "/sdcard/salida", "/sdcard/hora.txt", 0.0)) {
         ESP_LOGE(TAG, "no se pudo leer /sdcard/hora.txt: error de arranque");
         return;
     }
     if (hay_zona) { cad_zona(&C, ymin, ymax); ESP_LOGI(TAG, "zona de medición: Y de %.1f a %.1f m", ymin, ymax); }
+    if (hay_carril) { cad_carril(&C, xmin, xmax); ESP_LOGI(TAG, "franja de medición: X de %.1f a %.1f m", xmin, xmax); }
     if (camera_init() != ESP_OK) { ESP_LOGE(TAG, "no inicia la cámara"); return; }
     if (!md_init()) { ESP_LOGE(TAG, "sin memoria para el detector"); return; }
 
@@ -161,7 +169,7 @@ void vivo_ejecutar(int duracion_s)
         int64_t a = esp_timer_get_time();
         int n = md_process(fb->buf, fb->width, fb->height, b, MD_MAX_BLOBS, &st);
         int64_t dmd = esp_timer_get_time() - a;
-        if (n > 0 && nimg < VIVO_MAX_IMG && t - t_ult_img >= VIVO_SEP_IMG_S) {   // revisión del detector (solo desarrollo)
+        if (VIVO_GUARDAR_IMAGENES && n > 0 && nimg < VIVO_MAX_IMG && t - t_ult_img >= VIVO_SEP_IMG_S) {   // revisión del detector (solo desarrollo)
             char ruta[40];
             snprintf(ruta, sizeof ruta, "/sdcard/mov/v_%03d.bmp", nimg);
             if (guardar_debug_bmp(ruta, md_gris(), md_mascara(), b, n)) { nimg++; t_ult_img = t; }

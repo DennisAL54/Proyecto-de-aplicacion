@@ -15,7 +15,8 @@ struct Cadena {
     Tracker    T;
     Registro   G;
     Reloj      R;
-    double     zona_ymin, zona_ymax;   // zona de medición (m)
+    double     zona_ymin, zona_ymax;   // zona de medición a lo largo (m)
+    double     carril_xmin, carril_xmax; // franja de medición a lo ancho (m); descarta peatones y aceras
     double     t_ult;
     int        registrados;       // vehículos escritos con éxito
     int        errores;           // fallos de escritura
@@ -28,6 +29,9 @@ bool cad_iniciar(Cadena *C, const Homografia &H, const char *carpeta, const char
 
 // Cambia la zona de medición (por defecto CAD_ZONA_Y_MIN a CAD_ZONA_Y_MAX). Llamar después de cad_iniciar.
 void cad_zona(Cadena *C, double ymin, double ymax);
+
+// Cambia la franja lateral de medición (por defecto sin límite). Detecciones con X fuera de [xmin, xmax] se descartan.
+void cad_carril(Cadena *C, double xmin, double xmax);
 
 // Procesa un cuadro. t = instante (s); det_px[i] = {u, v} píxel del punto de contacto con el suelo.
 // Hay que llamarla en TODOS los cuadros, incluso sin detecciones (nd = 0). Devuelve cuántos vehículos se cerraron.
